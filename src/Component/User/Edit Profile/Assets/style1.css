@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f8f8;
+  /* width: 90rem;
+  height: 64rem; */
+}
+
+.dashboard {
+  /* background-image: url('/./img/back.svg');
+  background-repeat: no-repeat; */
+  text-indent: 3%;
+  text-align: start;
+  color: #f98686;
+  margin-left: 3.313rem;
+  text-decoration: none;
+}
+
+.dashboard:hover {
+  text-decoration: underline;
+  color: #f98686;
+}
+
+.left-side .profile-picture {
+  background-color: #ffffff;
+  width: 19rem;
+  height: 22rem;
+  border-radius: 0.938rem;
+}
+
+.profile-picture .picture {
+  width: 15.688rem;
+  height: 15.688rem;
+  background-image: none;
+  border-radius: 0.938rem;
+}
+
+.profile-picture .edit-profile {
+  background-image: url('./edit.svg');
+  background-repeat: no-repeat;
+  background-size: 1.6rem;
+  background-position: 5% 50%;
+  background-color: #fafbfc;
+  border-radius: 0.938rem;
+  color: #b0b7c3;
+}
+
+.left-side .progress-profile {
+  background-color: #ffffff;
+  width: 19rem;
+  height: 7.188rem;
+  border-radius: 0.938rem;
+}
+
+.progress-profile p {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.progress,
+.progress .progress-bar {
+  height: 0.313rem;
+  border-radius: 2.813rem;
+}
+
+.progress-profile .progress-percent {
+  color: #b0b7c3;
+}
+
+.left-side .membership {
+  background-color: #ffffff;
+  width: 19rem;
+  height: 7.188rem;
+  border-radius: 0.938rem;
+}
+
+.membership p {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.membership .basic {
+  color: #b0b7c3;
+  font-size: 0.813rem;
+}
+
+.membership .upgrade {
+  color: white;
+  font-size: 0.813rem;
+  background: linear-gradient(20.13deg, #f65555 -7.81%, #fbb6b6 125.84%);
+  border-radius: 1rem;
+}
+
+.right-side .information {
+  background-color: #ffffff;
+  width: 28.563rem;
+  height: 41.625rem;
+  border-radius: 0.938rem;
+  overflow: auto;
+}
+
+.information .halo {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #b0b7c3;
+}
+
+.information .username {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.information .explain {
+  font-size: 0.813rem;
+  color: #b0b7c3;
+}
+
+.history .donor {
+  width: 7.813rem;
+  height: 5.75rem;
+  background-color: #fafbfc;
+  border-radius: 0.938rem;
+  margin-bottom: 1.5rem;
+}
+
+.donor .judul {
+  font-size: 0.7em;
+  font-weight: 400;
+  color: #b0b7c3;
+}
+
+.donor .info {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #f98686;
+}
+
+.tentang-saya {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #4e5d78;
+}
+
+.detail-info {
+  height: 4%;
+  font-size: 0.813rem;
+  color: #b0b7c3;
+}
+
+.detail-info .detail {
+  color: #4e5d78;
+  font-weight: 600;
+}
+
+.information .jenis-kelamin {
+  background-image: url('./profile-circle.svg');
+  background-repeat: no-repeat;
+  background-position: 1% 50%;
+  text-indent: 9%;
+}
+
+.information .gol-darah {
+  background-image: url('./blood.svg');
+  background-repeat: no-repeat;
+  background-position: 1% 50%;
+  text-indent: 9%;
+}
+
+.information .rhesus {
+  background-image: url('./rhesus.svg');
+  background-repeat: no-repeat;
+  background-position: 1% 50%;
+  text-indent: 9%;
+}
+
+.information .ttl {
+  background-image: url('./cake.svg');
+  background-repeat: no-repeat;
+  background-position: 1% 50%;
+  text-indent: 9%;
+}
+
+.information .no-telp {
+  background-image: url('./call.svg');
+  background-repeat: no-repeat;
+  background-position: 1% 50%;
+  text-indent: 9%;
+}
+
+.information .alamat {
+  background-image: url('./house.svg');
+  background-repeat: no-repeat;
+  background-position: 1% 50%;
+  text-indent: 9%;
+}
+
+.information .email {
+  background-image: url('./mail.svg');
+  background-repeat: no-repeat;
+  background-position: 1% 50%;
+  text-indent: 9%;
+}
+
+.information .password {
+  background-image: url('./key.svg');
+  background-repeat: no-repeat;
+  background-position: 1% 50%;
+  text-indent: 9%;
+}

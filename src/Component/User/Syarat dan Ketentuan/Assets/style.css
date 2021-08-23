@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins';
+}
+
+.sk-logo {
+  width: 18vw;
+  margin-top: 2%;
+  margin-bottom: 6%;
+  margin-left: 3%;
+}
+
+.muted-text {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #8a94a6;
+}
+
+.sk-container {
+  width: 90vw;
+  margin-left: 5%;
+}
+
+.sk-content h3 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #4e5d78;
+}
