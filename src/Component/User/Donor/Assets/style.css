@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins';
+}
+
+.donor-container {
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 768px) {
+  .donor-container {
+    flex-direction: column;
+  }
+}
+
+.header-content {
+  margin-top: 3.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.header-text h2,
+.body-content h2 {
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: #4e5d78;
+  margin-bottom: 2rem;
+}
+
+.header-text h3 {
+  font-weight: 400;
+  font-size: 0.813rem;
+  color: #4e5d78;
+}
+
+.search-bar {
+  background-color: #fafbfc;
+  width: 50%;
+  border-radius: 0.938rem;
+}
+
+.search-bar .form-search,
+.search-bar-rs .form-search {
+  border: 0ch;
+  background-color: #fafbfc;
+}
+
+.body-content {
+  margin-left: 3%;
+}
+
+.body-content .search-bar-rs {
+  background-color: #fafbfc;
+  border-radius: 0.938rem;
+  width: 70%;
+}
+
+.calendar,
+.notification {
+  background-color: #fafbfc;
+  border-radius: 0.938rem;
+}
+
+.muted-text {
+  font-weight: 400;
+  font-size: 0.813rem;
+  color: #8a94a6;
+}
+
+.card-container {
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
+.card-container .lokasi-rs {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #4e5d78;
+}
+
+.card-container .card-icon {
+  margin-right: 3%;
+}
+
+.iklan .space-iklan {
+  width: 12.875rem;
+  height: 45.688rem;
+  background-color: #fafbfc;
+}

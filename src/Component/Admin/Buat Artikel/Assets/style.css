@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f8f8;
+  /* width: 90rem;
+    height: 64rem; */
+}
+
+.edit-bag-1 {
+  width: 29.563rem;
+  height: 41.875rem;
+  background-color: #ffffff;
+  border-radius: 0.938rem;
+  margin-bottom: 4%;
+}
+
+.form-informasi .informasi-detail {
+  border: 0em;
+}
+
+.teks-pembantu {
+  font-size: 0.813rem;
+  font-weight: 400;
+  color: #b0b7c3;
+}
+
+.button-submit .simpan-perubahan {
+  background: linear-gradient(20.13deg, #f65555 -7.81%, #fbb6b6 125.84%);
+  border-radius: 1rem;
+  color: #ffffff;
+}
+
+.button-submit .simpan-perubahan:hover {
+  color: #ffffff;
+}
+
+.ganti-thumbnail {
+  border: 0ch;
+  background-color: #fafbfc;
+}
+
+.ganti-foto {
+  background-repeat: no-repeat;
+  background-size: 1.6rem;
+  background-position: 5% 50%;
+  background-color: #fafbfc;
+  border-radius: 0.938rem;
+  color: #b0b7c3;
+}

@@ -1,24 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
+import Reservasi from './Component/User/Reservasi/Reservasi';
+import NavbarComp from './Component/User/Navbar Component/NavbarComp';
+import Reward from './Component/User/Reward/Reward';
+import Profile from './Component/User/Edit Profile/Profile';
+import EditProfile from './Component/User/Edit Profile/EditProfile';
+import Request from './Component/User/Request/Request';
+import Donor from './Component/User/Donor/Donor';
+import Beranda from './Component/User/Beranda/Beranda';
+import ArtikelKesehatan from './Component/User/Beranda/ArtikelKesehatan';
+import SyaratdanKetentuan from './Component/User/Syarat dan Ketentuan/SyaratdanKetentuan';
+import BerandaAdmin from './Component/Admin/Beranda Admin/BerandaAdmin';
+import BuatAkun from './Component/Admin/Buat Akun/BuatAkun';
+import BuatArtikel from './Component/Admin/Buat Artikel/BuatArtikel';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <BuatArtikel />
+    </Router>
   );
 }
 
