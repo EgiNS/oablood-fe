@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins';
+}
+
+.donor-container {
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 768px) {
+  .donor-container {
+    flex-direction: column;
+  }
+}
+
+.body-content {
+  margin-left: 3%;
+}
+
+.body-content {
+  margin-top: 3.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.search-bar {
+  background-color: #fafbfc;
+  width: 50%;
+  border-radius: 0.938rem;
+}
+
+.body-content .search-bar-rs {
+  background-color: #fafbfc;
+  border-radius: 0.938rem;
+  width: 70%;
+  margin-bottom: 2rem;
+}
+
+.muted-text {
+  font-weight: 400;
+  font-size: 0.813rem;
+  color: #8a94a6;
+}
+
+.default-text {
+  font-weight: 400;
+  font-size: 0.813rem;
+  color: #4e5d78;
+}
+
+.text-button {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  color: #f98686;
+  font-size: 0.813rem;
+}
+
+.status-pendonor {
+  width: 70vw;
+}
+
+.status-pendonor .header {
+  padding: 0.5rem 0.75rem;
+  background-color: #fafbfc;
+  border-radius: 15px;
+}
+
+.status-pendonor .pendonor {
+  margin-bottom: 2rem;
+}
+
+.nama-pendonor .profile-picture {
+  width: 3.75rem;
+  height: 3.75rem;
+  margin-right: 1rem;
+}
+
+.button-selesai .btn {
+  background: linear-gradient(20.13deg, #f65555 -7.81%, #fbb6b6 125.84%);
+  color: white;
+  border-radius: 15px;
+  padding: 0.5rem;
+  margin-right: 0.75rem;
+}
+
+.button-selesai .btn:hover {
+  color: white;
+}
+
+.button-batal .btn {
+  background-color: transparent;
+  border: 1px solid #fbb6b6;
+  color: #fbb6b6;
+  border-radius: 15px;
+  padding: 0.5rem 0.75rem;
+}
+
+.button-batal .btn:hover {
+  color: #fbb6b6;
+}

@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins';
+}
+
+.reward-container {
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 768px) {
+  .reward-container {
+    flex-direction: column;
+  }
+}
+
+.tulisan-reward {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #4e5d78;
+}
+
+.search-bar {
+  background-color: #fafbfc;
+  width: 50%;
+  border-radius: 0.938rem;
+}
+
+.search-bar .form-search {
+  border: 0ch;
+  background-color: #fafbfc;
+}
+
+.calendar,
+.notification {
+  background-color: #fafbfc;
+  border-radius: 0.938rem;
+}
+
+.urutkan {
+  width: 30%;
+  background-color: #fafbfc;
+  border-radius: 0.938rem;
+}
+
+.urutkan .form-urut {
+  border: 0ch;
+  background-color: #fafbfc;
+}
+
+.buat-reward .buat-reward-button {
+  background: linear-gradient(20.13deg, #f65555 -7.81%, #fbb6b6 125.84%);
+  color: white;
+  border-radius: 15px;
+  padding: 0.5rem 1.5rem;
+}
+
+.buat-reward .buat-reward-button:hover {
+  color: white;
+}
+
+.rewards {
+  border-radius: 0.938rem;
+}
+
+.rewards .reward .card-title,
+.nama-hadiah {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #4e5d78;
+}
+
+.teks-poin {
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #f98686;
+}
+
+.iklan .space-iklan {
+  width: 12.875rem;
+  height: 45.688rem;
+  background-color: #fafbfc;
+}
+
+.space-iklan .teks-iklan,
+.jumlah-poin {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #b0b7c3;
+}
+
+.footer-modal .batal {
+  border: 1px solid #fbb6b6;
+  border-radius: 0.938rem;
+  width: 11.875rem;
+  background: #ffffff;
+}
+
+.footer-modal .lanjutkan {
+  background: linear-gradient(20.13deg, #f65555 -7.81%, #fbb6b6 125.84%);
+  width: 11.875rem;
+  border-radius: 0.938rem;
+  color: white;
+}

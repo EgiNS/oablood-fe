@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins';
+}
+
+.beranda-pmi-container {
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 768px) {
+  .beranda-pmi-container {
+    flex-direction: column;
+  }
+}
+
+.search-bar {
+  background-color: #fafbfc;
+  width: 50%;
+  border-radius: 0.938rem;
+}
+
+.search-bar .form-search,
+.search-bar-rs .form-search {
+  border: 0ch;
+  background-color: #fafbfc;
+}
+
+.calendar,
+.notification {
+  background-color: #fafbfc;
+  border-radius: 0.938rem;
+}
+
+.greet-content,
+.intro-content,
+.artikel-section,
+.card-artikel {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 2.3rem;
+}
+
+.greet-content .muted-text-greet {
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #b0b7c3;
+}
+
+.muted-text-greet .username {
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #4e5d78;
+}
+
+.greet .muted-text {
+  font-weight: 400;
+  font-size: 0.813rem;
+  color: #8a94a6;
+}
+
+.intro-text,
+.riwayat-donor {
+  border: 1px solid #f8f8f8;
+  border-radius: 1rem;
+  margin-right: 3%;
+  padding: 1rem;
+}
+
+.intro-text .text h3,
+.riwayat-donor h3,
+.form-feedback h3,
+.artikel-section .header h3,
+.judul-artikel {
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: #4e5d78;
+}
+
+.muted-text {
+  font-weight: 400;
+  font-size: 0.813rem;
+  color: #8a94a6;
+}
+
+.riwayat-donor h3 {
+  margin-bottom: 7%;
+}
+
+.riwayat-donor p {
+  margin-bottom: 18%;
+}
+
+.justified {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.riwayat-donor .buat-akun-button,
+#buat-artikel-button {
+  background: linear-gradient(20.13deg, #f65555 -7.81%, #fbb6b6 125.84%);
+  color: white;
+  border-radius: 15px;
+  padding: 0.5rem 1.5rem;
+}
+.riwayat-donor .buat-akun-button:hover,
+#buat-artikel-button:hover {
+  color: white;
+}
+
+.text .button-donor {
+  border: 1px solid #fbb6b6;
+  color: #fbb6b6;
+  border-radius: 0.938rem;
+}
+
+.text .button-donor:hover {
+  color: white;
+  background-color: #fbb6b6;
+  box-shadow: 0px 8px 25px rgba(251, 182, 182, 0.35);
+}
+
+.artikel-section .header {
+  margin-bottom: 3%;
+}
+
+.text-button {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  color: #f98686;
+  font-size: 0.813rem;
+}
+
+.artikel-kesehatan {
+  overflow: hidden;
+}
+
+.artikel-title {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #4e5d78;
+}
+
+/* bagian Modals */
+.modal-body h4 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #4e5d78;
+}
+
+/* bagian footer */
+.feedback {
+  margin-top: 5%;
+}
+.default-text {
+  font-weight: 400;
+  font-size: 0.813rem;
+  color: #4e5d78;
+}
+
+.form-feedback {
+  margin-left: 4%;
+  margin-right: 2%;
+}
+
+.form-feedback h3 {
+  margin-bottom: 6%;
+}
+
+.form-feedback .form-control {
+  width: 40vw;
+  border-radius: 0.938rem;
+  margin-bottom: 0.75rem;
+}
+
+.form-feedback .button-feedback {
+  border: 1px solid #fbb6b6;
+  color: #fbb6b6;
+  border-radius: 0.938rem;
+  width: 40vw;
+}
+
+.form-feedback .button-feedback:hover {
+  color: white;
+  background-color: #fbb6b6;
+  box-shadow: 0px 8px 25px rgba(251, 182, 182, 0.35);
+}
+
+.form-feedback .input-text-feedback {
+  height: 3.125rem;
+}
+
+.form-feedback .text-area-feedback {
+  height: 47vh;
+}

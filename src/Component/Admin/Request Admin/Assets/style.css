@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins';
+}
+
+.request-container {
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 768px) {
+  .request-container {
+    flex-direction: column;
+  }
+}
+
+.tulisan-reward {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #4e5d78;
+}
+
+.search-bar {
+  background-color: #fafbfc;
+  width: 50%;
+  border-radius: 0.938rem;
+}
+
+.search-bar .form-search,
+.search-bar-rs .form-search {
+  border: 0ch;
+  background-color: #fafbfc;
+}
+
+.calendar,
+.notification {
+  background-color: #fafbfc;
+  border-radius: 0.938rem;
+}
+
+.request-content .teks-intro {
+  margin: 4%;
+}
+
+.teks-intro h2 {
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: #4e5d78;
+}
+
+.request-container .search-bar-rs {
+  margin-left: 4%;
+  background-color: #fafbfc;
+  border-radius: 0.938rem;
+  width: 70%;
+}
+
+.card-container {
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
+.card-container .lokasi-rs {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #4e5d78;
+}
+
+.muted-text {
+  font-weight: 400;
+  font-size: 0.813rem;
+  color: #8a94a6;
+}
+
+.card-container .card-icon {
+  margin-right: 3%;
+}
+
+.lihat-lokasi {
+  text-decoration: none;
+  font-size: 0.813rem;
+  color: #f98686;
+}
+
+.lihat-lokasi:hover {
+  color: #f98686;
+}
