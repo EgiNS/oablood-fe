@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-body {
+.profile {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   background-color: #f8f8f8;
   /* width: 90rem;
@@ -61,7 +60,7 @@ body {
   font-size: 1rem;
 }
 
-.progress,
+.progress-profile .progress,
 .progress .progress-bar {
   height: 0.313rem;
   border-radius: 2.813rem;
@@ -109,9 +108,10 @@ body {
   color: #b0b7c3;
 }
 
-.information .username {
+.information .halo .username {
   font-size: 1.5rem;
   font-weight: 600;
+  color: #4e5d78;
 }
 
 .information .explain {
@@ -145,7 +145,7 @@ body {
   color: #4e5d78;
 }
 
-.detail-info {
+.right-side .detail-info {
   height: 4%;
   font-size: 0.813rem;
   color: #b0b7c3;

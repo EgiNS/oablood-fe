@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import NavbarCompAdmin from '../NavbarCompAdmin/NavbarCompAdmin';
+import NavbarCompRS from '../../Rumah Sakit/NavbarCompRS/NavbarCompRS';
 import './Assets/style.css';
 
 class Test extends Component {
@@ -8,7 +8,7 @@ class Test extends Component {
     return (
       <div className="dashb-container">
         <div className="navbarComp">
-          <NavbarCompAdmin />
+          <NavbarCompRS />
         </div>
         <div className="dash-content">
           <h3>Halo!</h3>

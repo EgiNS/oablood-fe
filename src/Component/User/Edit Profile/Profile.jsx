@@ -7,7 +7,7 @@ class Profile extends Component {
   state = {};
   render() {
     return (
-      <div className="container">
+      <div className="profile">
         <div className="w-100 py-5">
           <Link to="/dashboard" className="dashboard">
             <img src={Back} alt="back" /> Kembali ke Dashboard
@@ -44,8 +44,10 @@ class Profile extends Component {
             <div className="col-lg-6 right-side">
               <div className="information container mb-4">
                 {/*  kasih nama user */}
-                <p className="halo d-inline-block my-3">Halo,</p>
-                <p className="username d-inline-block my-3">Joseph Widodo &#128075;</p>
+                <p className="halo d-inline-block my-3">
+                  Halo, <span className="username">Joseph Widodo &#128075;</span>
+                </p>
+                <p className=" d-inline-block my-3"></p>
                 <p className="explain">Disini kamu bisa melihat profil kamu secara lengkap</p>
                 <div className="history d-flex justify-content-between">
                   <div className="container donor text-nowrap">

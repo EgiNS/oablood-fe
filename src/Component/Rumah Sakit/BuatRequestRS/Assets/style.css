@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.request-form {
+  display: flex;
+  justify-content: center;
+}
+
+.request-form .left-side,
+.request-form .right-side {
+  width: 21.875rem;
+  height: 47.938rem;
+  background-color: white;
+  margin: 2%;
+  border-radius: 15px;
+  border: 1px solid #b0b7c3;
+}
+
+.left-side .picture {
+  width: 18.438rem;
+  height: 13.813rem;
+  margin: 6% auto;
+  border-radius: 15px;
+}
+
+.left-side .ganti-foto {
+  background-repeat: no-repeat;
+  background-size: 1.6rem;
+  background-position: 5% 50%;
+  background-color: white;
+  border-radius: 15px;
+  color: #b0b7c3;
+  margin: 3% auto;
+}
+
+.ganti-foto .ganti-thumbnail {
+  border: 0ch;
+  background-color: white;
+}
+
+.muted-text {
+  font-weight: 400;
+  font-size: 0.813rem;
+  color: #b0b7c3;
+  margin-left: 4%;
+  background-color: white;
+}
+
+.form-label,
+.request-form img,
+.left-side .option-select {
+  background-color: white;
+}
+
+.form-informasi,
+.left-side .option-select {
+  border: 0em;
+  background-color: white;
+  margin-bottom: 8%;
+}
+
+.option-select .opsi-gol-darah,
+.option-select .opsi-rhesus {
+  border: 0em;
+}
+
+#syarat-khusus {
+  border: 0ch;
+  padding: 0.5rem;
+  width: 20.875rem;
+  height: 43.938rem;
+  border-radius: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .buat-request .request-form {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

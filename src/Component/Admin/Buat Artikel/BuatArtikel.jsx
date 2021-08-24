@@ -11,15 +11,15 @@ class BuatArtikel extends Component {
   state = {};
   render() {
     return (
-      <React.Fragment>
+      <div className="buat-artikel">
         <div className="w-100 py-5">
           <a className="profil d-block" href="#">
             {' '}
             <img src={Back} alt="" /> Kembali ke Halaman Profil
           </a>
         </div>
-        <div className="edit-bag-1 container">
-          <div className="picture container"></div>
+        <div className="edit-bag-1">
+          <div className="picture m-auto"></div>
           <div className="d-grid gap-2 mb-5">
             <button className="btn p-1 ganti-foto d-flex align-items-center" type="button">
               <img src={gallery} alt="gallery" className="me-2" />
@@ -56,7 +56,7 @@ class BuatArtikel extends Component {
             </button>
           </div>
         </div>
-      </React.Fragment>
+      </div>
     );
   }
 }
