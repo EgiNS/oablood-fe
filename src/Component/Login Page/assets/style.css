@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.kontainer {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.bg-left {
+    width: 42vw;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 10vh;
+    background-color: #FAFBFC;;
+    width: 42vw;
+}
+
+.logo #logo-img img{
+    margin: 3.7vw;
+}
+
+.logo p {
+    margin: auto -1.5vw;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.4rem;
+    letter-spacing: 1.5px;
+}
+
+.bg {
+    height: 90vh;
+    width: 42vw;
+    background-image: url("Group 6.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.form-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+}
+
+.form-right Input#email {
+    background-image: url("Email.svg");
+    background-size: 1.6rem;
+    background-position: 5% 50%;
+    background-repeat: no-repeat;
+    text-indent: 15%;
+}
+
+.form-right Input#nama {
+    background-image: url("Nama.svg");
+    background-size: 1.6rem;
+    background-position: 5% 50%;
+    background-repeat: no-repeat;
+    text-indent: 15%;
+}
+
+.form-right Input#password {
+    background-image: url("Password.svg");
+    background-size: 1.6rem;
+    background-position: 5% 50%;
+    background-repeat: no-repeat;
+    text-indent: 15%;
+}
+
+.form-right Label#checklabel {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 150%;
+    color: #B0B7C3;
+    margin-bottom: 44px;
+}
+
+.form-right #masuk {
+    font-size: 1.625rem;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 1.8125rem;
+    margin-bottom: 1.5rem;
+    color: #4E5D78;
+}
+
+.form-right #welcome {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.8125rem;
+    margin-bottom: 2.5rem;
+    color: #B0B7C3;
+}
+
+Input#email, Input#password, Input#nama, Form Button {
+    width: 33.75rem;
+    height: 3.625rem;
+    border-radius: 0.9375rem;
+    margin-bottom: 2rem;
+}
+
+.form-right #forget {
+    text-align: end;
+    margin-bottom: 2rem;
+    text-decoration: none;
+    color: #F98686;
+    display: block;
+}
+
+.form-right Button {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    background: linear-gradient(20.13deg, #F65555 -7.81%, #FBB6B6 125.84%);
+    border-radius: 0.9375rem;
+    margin-bottom: 2rem;
+    border: none;
+}
+
+.form-right p#belum {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 150%;
+    color: #B0B7C3;
+}
+
+.form-right p#belum a {
+    text-decoration: none;
+    color: #F98686;
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 12px;
+    }
+
+    .bg-left .bg {
+        display: none;
+    }
+
+    .bg-left {
+        height: 10vh;
+        margin-bottom: 0;
+    }
+
+    .bg-left .logo {
+        width: 100vw;
+    }
+
+    .kontainer {
+        flex-direction: column;
+    }
+
+    Input#email, Input#password, Input#nama, Form Button, Form {
+        width: 75vw;
+    }
+}
