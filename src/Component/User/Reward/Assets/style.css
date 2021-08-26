@@ -12,8 +12,21 @@
 }
 
 @media screen and (max-width: 768px) {
-  .reward-container {
+  .reward-container,
+  .bagian-atas {
     flex-direction: column;
+  }
+
+  .bagian-atas .icon {
+    align-items: flex-start;
+  }
+
+  .iklan {
+    justify-content: center;
+  }
+
+  .urutkan {
+    width: 50%;
   }
 }
 
@@ -41,7 +54,7 @@
 }
 
 .urutkan {
-  width: 30%;
+  width: 50%;
   background-color: #fafbfc;
   border-radius: 0.938rem;
 }

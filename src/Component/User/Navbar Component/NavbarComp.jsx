@@ -10,8 +10,9 @@ import user from './Assets/User.svg';
 import ads from './Assets/Ads.svg';
 import logout from './Assets/Logout.svg';
 import './Assets/Style.css';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import { Collapse, NavbarToggler, Nav, Navbar } from 'reactstrap';
+import Donor from '../Donor/Donor';
 
 export default function NavbarComp() {
   const [isOpen, setIsOpen] = useState(false);

@@ -12,9 +12,26 @@
 }
 
 @media screen and (max-width: 768px) {
-  .request-container {
+  .request-container,
+  .bagian-atas {
     flex-direction: column;
   }
+
+  .bagian-atas .icon {
+    align-items: flex-start;
+  }
+
+  .iklan {
+    justify-content: center;
+  }
+}
+
+.icon {
+  width: 65%;
+}
+
+.bagian-atas {
+  margin-bottom: 3%;
 }
 
 .tulisan-reward {
@@ -23,7 +40,7 @@
   color: #4e5d78;
 }
 
-.search-bar {
+.icon .search-bar {
   background-color: #fafbfc;
   width: 50%;
   border-radius: 0.938rem;

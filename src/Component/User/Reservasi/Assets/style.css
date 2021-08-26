@@ -16,9 +16,31 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .reservasi-container {
+  .reservasi-container,
+  .bagian-atas {
     flex-direction: column;
   }
+
+  .bagian-atas .icon {
+    align-items: flex-start;
+  }
+
+  .iklan {
+    justify-content: center;
+  }
+
+  .foot-modal .button-batal {
+    width: 35%;
+  }
+
+  .foot-modal .button-lanjutkan {
+    width: 35%;
+  }
+}
+
+.bagian-atas {
+  margin-top: 2%;
+  margin-bottom: 4%;
 }
 
 .tulisan-reward {
@@ -53,6 +75,55 @@ body {
   font-weight: 400;
   font-size: 1.25rem;
   color: #4e5d78;
+}
+
+.judul-modal {
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: #4e5d78;
+  margin-bottom: 5%;
+}
+
+.pilih-tanggal {
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: #4e5d78;
+}
+
+.modal-body-reservasi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.foot-modal {
+  justify-content: center;
+  margin-bottom: 3%;
+}
+
+.foot-modal .button-batal {
+  border: 1px solid #fbb6b6;
+  color: #fbb6b6;
+  border-radius: 15px;
+  width: 28%;
+  margin-right: 7%;
+}
+
+.foot-modal .button-batal:hover {
+  color: white;
+  background-color: #fbb6b6;
+  box-shadow: 0px 8px 25px rgba(251, 182, 182, 0.35);
+}
+
+.foot-modal .button-lanjutkan {
+  background: linear-gradient(20.13deg, #f65555 -7.81%, #fbb6b6 125.84%);
+  border-radius: 15px;
+  color: white;
+  width: 28%;
+}
+
+.foot-modal .button-lanjutkan:hover {
+  color: white;
 }
 
 .reservasi-container .search-bar-rs {
