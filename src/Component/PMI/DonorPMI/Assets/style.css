@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins';
+}
+
+.donor-container {
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 768px) {
+  .donor-container {
+    flex-direction: column;
+  }
+}
+
+.header-content,
+.body-content {
+  margin-top: 3.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.body-content .header {
+  margin-bottom: 3.5rem;
+}
+
+.body-content .header .buat-event-button {
+  background: linear-gradient(20.13deg, #f65555 -7.81%, #fbb6b6 125.84%);
+  color: white;
+  border-radius: 15px;
+  padding: 0.5rem 1.5rem;
+}
+
+.body-content .header .buat-event-button:hover {
+  color: white;
+}
+
+.body-content .header h2 {
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: #4e5d78;
+  margin: auto 0;
+}
+
+.search-bar {
+  background-color: #fafbfc;
+  width: 50%;
+  border-radius: 0.938rem;
+}
+
+.search-bar .form-search,
+.search-bar-rs .form-search {
+  border: 0ch;
+  background-color: #fafbfc;
+}
+
+.body-content {
+  margin-left: 3%;
+}
+
+.body-content .search-bar-rs {
+  background-color: #fafbfc;
+  border-radius: 0.938rem;
+  width: 70%;
+}
+
+.calendar,
+.notification {
+  background-color: #fafbfc;
+  border-radius: 0.938rem;
+}
+
+.muted-text {
+  font-weight: 400;
+  font-size: 0.813rem;
+  color: #8a94a6;
+}
+
+.card-container {
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
+.card-container .lokasi-rs {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #4e5d78;
+}
+
+.card-container .card-icon {
+  margin-right: 3%;
+}
