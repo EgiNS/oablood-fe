@@ -12,9 +12,38 @@
 }
 
 @media screen and (max-width: 768px) {
-  .donor-container {
+  .donor-container,
+  .bagian-atas,
+  .header-content,
+  .body-content,
+  .body-content .artikel {
     flex-direction: column;
   }
+
+  .donor-content .bagian-atas {
+    align-items: flex-start;
+  }
+
+  .icon .search-bar {
+    width: 80%;
+  }
+
+  .header-content .header-bg {
+    display: none;
+  }
+
+  .body-content .search-bar-rs,
+  .search-bar-rs .form-search {
+    width: 100%;
+  }
+
+  .artikel .iklan {
+    justify-content: center;
+  }
+}
+
+.icon {
+  width: 65%;
 }
 
 .header-content {
@@ -36,7 +65,7 @@
   color: #4e5d78;
 }
 
-.search-bar {
+.icon .search-bar {
   background-color: #fafbfc;
   width: 50%;
   border-radius: 0.938rem;
@@ -55,7 +84,7 @@
 .body-content .search-bar-rs {
   background-color: #fafbfc;
   border-radius: 0.938rem;
-  width: 70%;
+  width: 80%;
 }
 
 .calendar,

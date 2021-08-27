@@ -18,24 +18,26 @@ class Reward extends Component {
           <NavbarComp />
         </div>
         <div className="reward-content container">
-          <div className="bagian-atas container d-flex align-items-center m-3 ">
+          <div className="bagian-atas container d-flex m-3 ">
             <h3 className="ms-2 me-4 tulisan-reward">Reward</h3>
-            <div className="search-bar d-flex p-2 mx-2">
-              <img src={search} alt="search" />
-              <input type="search" className=" form-search form-control" id="exampleFormControlInput1" placeholder="Cari berita terkini tentang donor darah ..."></input>
-            </div>
-            <div className="calendar p-2 mx-2">
-              <button type="button" className="btn">
-                <img src={calendar} alt="calendar" />
-              </button>
-            </div>
-            <div className="notification p-2 mx-2">
-              <button type="button" className="btn">
-                <img src={notification} alt="notification" />
-              </button>
+            <div className="icon d-flex">
+              <div className="search-bar d-flex p-2 mx-2">
+                <img src={search} alt="search" />
+                <input type="search" className=" form-search form-control" id="exampleFormControlInput1" placeholder="Cari berita terkini tentang donor darah ..."></input>
+              </div>
+              <div className="calendar p-2 mx-2">
+                <button type="button" className="btn">
+                  <img src={calendar} alt="calendar" />
+                </button>
+              </div>
+              <div className="notification p-2 mx-2">
+                <button type="button" className="btn">
+                  <img src={notification} alt="notification" />
+                </button>
+              </div>
             </div>
           </div>
-          <div className="urutkan d-flex p-2 m-4">
+          <div className="urutkan p-1 m-3">
             <select className="form-select form-urut" aria-label="Default select example">
               <option value="Termurah">Termurah</option>
               <option value="Termahal">Termahal</option>

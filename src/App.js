@@ -28,13 +28,14 @@ import ArtikelRS from './Component/Rumah Sakit/BerandaRS/ArtikelRS';
 import RequestRS from './Component/Rumah Sakit/RequestRS/RequestRS';
 import BuatRequest from './Component/Rumah Sakit/BuatRequestRS/BuatRequest';
 import JadwalRS from './Component/Rumah Sakit/JadwalRS/JadwalRS';
+import UpgradePro from './Component/User/Upgrade Pro/UpgradePro';
 import Test from './Component/Admin/Test/test';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 function App() {
   return (
     <Router>
-      <BerandaPMI />
+      <Reservasi />
     </Router>
   );
 }
