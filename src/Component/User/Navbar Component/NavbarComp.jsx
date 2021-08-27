@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import NavbarFunct from './NavbarFunct';
 import axios from 'axios';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import logo from './Assets/Logo.svg';
 import ayoDonor from './Assets/Donor.svg';
 import poin from './Assets/Poin.svg';
@@ -19,7 +19,7 @@ import Donor from '../Donor/Donor';
 
 const id_user = localStorage.getItem('id_user');
 
-export default class Navbar extends Component {
+export default class NavbarComp extends Component {
     state = {};
 
     componentDidMount(){
