@@ -70,21 +70,23 @@ class Donor extends Component {
           <NavbarComp></NavbarComp>
         </div>
         <div className="donor-content">
-          <div className="bagian-atas container d-flex align-items-center m-3">
+          <div className="bagian-atas container d-flex m-3">
             <h3 className="ms-2 me-4 tulisan-reward">Donor</h3>
-            <div className="search-bar d-flex p-2 mx-2">
-              <img src={search} alt="search" />
-              <input type="search" className=" form-search form-control" id="exampleFormControlInput1" placeholder="Cari berita terkini tentang donor darah ..."></input>
-            </div>
-            <div className="calendar p-2 mx-2">
-              <button type="button" className="btn">
-                <img src={calendar} alt="calendar" />
-              </button>
-            </div>
-            <div className="notification p-2 mx-2">
-              <button type="button" className="btn">
-                <img src={notification} alt="notification" />
-              </button>
+            <div className="icon d-flex">
+              <div className="search-bar d-flex p-2 mx-2">
+                <img src={search} alt="search" />
+                <input type="search" className=" form-search form-control" id="exampleFormControlInput1" placeholder="Cari berita terkini tentang donor darah ..."></input>
+              </div>
+              <div className="calendar p-2 mx-2">
+                <button type="button" className="btn">
+                  <img src={calendar} alt="calendar" />
+                </button>
+              </div>
+              <div className="notification p-2 mx-2">
+                <button type="button" className="btn">
+                  <img src={notification} alt="notification" />
+                </button>
+              </div>
             </div>
           </div>
           <div className="header-content d-flex">
@@ -109,12 +111,12 @@ class Donor extends Component {
             </div>
           </div>
           <div className="body-content">
-            <h2>Event Donor Darah di Sekitarmu &#127881;</h2>
-            <div className="search-bar-rs d-flex p-1">
+            <h2 className="ms-3">Event Donor Darah di Sekitarmu &#127881;</h2>
+            <div className="search-bar-rs d-flex p-1 ms-3">
               <img src={location} alt="location" />
               <input type="search" className=" form-search form-control" id="exampleFormControlInput1" placeholder="Temukan event donor terdekat di sekitarmu ..."></input>
             </div>
-            <div className="d-flex">
+            <div className="d-flex artikel">
               <div className="row row-cols-1 row-cols-md-2 g-4 m-3">
                 {/* {
                     this.state.post.map(post => {

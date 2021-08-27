@@ -31,6 +31,7 @@ import ArtikelRS from './Component/Rumah Sakit/BerandaRS/ArtikelRS';
 import RequestRS from './Component/Rumah Sakit/RequestRS/RequestRS';
 import BuatRequest from './Component/Rumah Sakit/BuatRequestRS/BuatRequest';
 import JadwalRS from './Component/Rumah Sakit/JadwalRS/JadwalRS';
+import UpgradePro from './Component/User/Upgrade Pro/UpgradePro';
 import Test from './Component/Admin/Test/test';
 import axios from 'axios';
 import ArtikelComp from './Component/User/Beranda/ArtikelComp';

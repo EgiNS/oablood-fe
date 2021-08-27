@@ -3,6 +3,7 @@ import blood from './Assets/blood.svg';
 import pengantri from './Assets/pengantri.svg';
 import rhesus from './Assets/rhesus.svg';
 import rumahsakit1 from './Assets/rumahsakit1.png';
+import LihatSyarat from './LihatSyarat';
 import ModalReservasi from './ModalReservasi';
 import './Assets/style.css';
 
@@ -19,7 +20,7 @@ class cardReservasi extends Component {
             <span className="muted-text me-4">(angka) pengantri</span>
             {/* <span className="muted-text">Lihat Syarat Donor</span> */}
             <span>
-              <ModalReservasi className="modal-lg" />
+              <LihatSyarat className="modal-lg" />
             </span>
           </p>
           <p className="d-flex">
@@ -28,11 +29,7 @@ class cardReservasi extends Component {
             <img src={rhesus} alt="rhesus" className="card-icon" />
             <span className="muted-text">Rhesus (+)</span>
           </p>
-          <div className="d-grid w-100 mx-auto">
-            <button class="btn card-button" type="button">
-              Booking Jadwal
-            </button>
-          </div>
+          <ModalReservasi className="modal-lg" />
         </div>
       </div>
     );

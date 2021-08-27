@@ -12,14 +12,77 @@
 }
 
 @media screen and (max-width: 768px) {
-  .beranda-container {
+  .beranda-container,
+  .intro-content,
+  .greet-content,
+  .feedback,
+  .feedback .form-feedback,
+  .bagian-atas {
     flex-direction: column;
+  }
+
+  .beranda-content .bagian-atas {
+    align-items: flex-start;
+  }
+
+  .icon .search-bar {
+    width: 80%;
+  }
+
+  .greet-content .greet {
+    width: 100%;
+  }
+
+  .greet-content .iklan1 {
+    width: 100%;
+    height: 10vh;
+  }
+
+  .intro-content {
+    align-items: center;
+  }
+
+  .intro-content .intro-text {
+    width: 90vw;
+    align-items: center;
+    margin-bottom: 3%;
+  }
+
+  .intro-text .image {
+    display: none;
+  }
+
+  .intro-content .riwayat-donor {
+    width: 90vw;
+  }
+
+  .feedback :nth-child(1) {
+    order: 2;
+  }
+  .feedback :nth-child(2) {
+    order: 1;
+  }
+  .feedback .form-feedback :nth-child(1) {
+    order: 1;
+  }
+  .feedback .form-feedback :nth-child(2) {
+    order: 2;
+  }
+
+  .form-feedback .left-side .form-control {
+    width: 100%;
+    border-radius: 0.938rem;
+    margin-bottom: 0.75rem;
   }
 }
 
-.search-bar {
+.icon {
+  width: 65%;
+}
+
+.icon .search-bar {
   background-color: #fafbfc;
-  width: 50%;
+  width: 100%;
   border-radius: 0.938rem;
 }
 

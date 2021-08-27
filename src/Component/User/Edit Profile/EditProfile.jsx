@@ -18,7 +18,7 @@ class EditProfile extends Component {
   state = {};
   render() {
     return (
-      <React.Fragment>
+      <div className="edit-profile">
         <div className="w-100 py-5">
           <Link to="/profile">
             <a className="profil d-block" href="#">
@@ -140,7 +140,7 @@ class EditProfile extends Component {
             </div>
           </div>
         </div>
-      </React.Fragment>
+      </div>
     );
   }
 }
