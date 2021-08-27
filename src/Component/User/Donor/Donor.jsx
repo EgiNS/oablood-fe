@@ -7,9 +7,62 @@ import notification from './Assets/notification.svg';
 import location from './Assets/location.svg';
 import donorbg from './Assets/donorbg.svg';
 import './Assets/style.css';
+import axios from 'axios';
 
 class Donor extends Component {
-  state = {};
+  state = {
+    post: [],
+    pmi_name:[]
+  }
+
+  componentDidMount(){
+      axios.get('/event').then(
+          res => {
+              console.log("event", res);
+              this.setState({
+                  post: res.data,
+              })
+              for (let i=0; i<this.state.post.length; i++) {
+                // this.setState({
+                //   id_pmi: this.state.post.id_pmi 
+                // })
+                // console.log(this.state.id_pmi)
+                // res.data.profile.name
+                axios.get(`pmi/profile-pmi/${this.state.post[i].id_pmi}`).then(
+                  res => {
+                      this.setState({
+                        pmi_name: [...this.state.pmi_name, res.data.profile.name] 
+                      })
+                      console.log("masuk", this.state.pmi_name)
+                  },
+                  err => {
+                      console.log(err);
+                  }
+                )
+              }
+              console.log("post", this.state.post)
+              console.log("name", this.state.pmi_name)
+          },
+          err => {
+              console.log(err);
+          }
+      )
+  };
+
+//   componentDidMount = () => {
+
+//     axios.get(`pmi/profile-pmi/1`).then(
+//         res => {
+//             this.setState({
+//               pmi_name: res.data.name
+//             })
+//         },
+//         err => {
+//             console.log(err);
+//         }
+//     )
+// };
+
   render() {
     return (
       <div className="donor-container">
@@ -63,6 +116,20 @@ class Donor extends Component {
             </div>
             <div className="d-flex">
               <div className="row row-cols-1 row-cols-md-2 g-4 m-3">
+                {/* {
+                    this.state.post.map(post => {
+                        return <CardDonor name={post.}/>
+                    })
+                } */}
+
+                
+                {/* {
+                  for (let i=0; i<9; i++){
+
+                  }
+                } */}
+                
+
                 <CardDonor />
                 <CardDonor />
                 <CardDonor />

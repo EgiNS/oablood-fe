@@ -12,9 +12,30 @@ import facebook from './Assets/facebook.svg';
 import twitter from './Assets/twitter.svg';
 import instagram from './Assets/instagram.svg';
 import './Assets/style.css';
+import CardArtikel from './CardArtikel';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 class Beranda extends Component {
-  state = {};
+
+    state = {
+      post: []
+  }
+
+  componentDidMount(){
+      axios.get('/user/artikel').then(
+          res => {
+              console.log(res);
+              this.setState({
+                  post: res.data
+              })
+          },
+          err => {
+              console.log(err);
+          }
+      )
+  };
+
   render() {
     return (
       <div className="beranda-container">
@@ -42,7 +63,8 @@ class Beranda extends Component {
           <div className="greet-content d-flex">
             <div className="greet me-5">
               <p className="muted-text-greet">
-                Halo, <span className="username">(Joseph Widodo)</span> &#128075;
+                {console.log("WOI", this.props.user.name,this.props.sapa)}
+                Halo, <span className="username">{this.props.user.name}</span> &#128075;
               </p>
               <p className="muted-text">Rabu, 11 Agustus 2021</p>
             </div>
@@ -85,16 +107,21 @@ class Beranda extends Component {
           <div className="artikel-section">
             <div className="header d-flex justify-content-between">
               <h3>Artikel Kesehatan</h3>
-              <p className="text-button">Lihat Semua Artikel</p>
+              <Link to="/artikel" style={{textDecoration:"none"}}><p className="text-button">Lihat Semua Artikel</p></Link>
             </div>
             <div className="artikel-kesehatan">
-              <div className="row row-cols-1 row-cols-lg-4 g-4">
-                <div className="col">
+              <div className="row row-cols-1 row-cols-lg-4 g-4" style={{display:"flex", flexDirection:"row", alignItems:"center", alignContent:"stretch"}}>
+                {/* <div className="col">
                   <div className="card card-container">
                     <img src={artikelcover} alt="artikelcover" className="card-img-top mb-4" />
-                    <p className="lokasi-rs mb-4">TRumah Sakit RS William Booth Hospital Surabaya</p>
+                    <p className="lokasi-rs mb-4">Rumah Sakit RS William Booth Hospital Surabaya</p>
                   </div>
-                </div>
+                </div> */}
+                  {
+                    this.state.post.map(post => {
+                        return <CardArtikel judul={post.judul} link={post.link} image={post.image}/>
+                    })
+                  }
               </div>
             </div>
             <div className="feedback d-flex">

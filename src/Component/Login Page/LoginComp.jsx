@@ -23,6 +23,7 @@ export default class LoginComp extends Component {
             .then(res => {
                 console.log(res);
                 localStorage.setItem('token', res.data.token);
+                localStorage.setItem('id_user', res.data.id_user);
                 this.setState({
                     login: true
                 });
@@ -35,7 +36,7 @@ export default class LoginComp extends Component {
 
     render() {
         if(this.state.login) {
-            return <Redirect to={'/dashboard'} />;
+            return <Redirect to={'/beranda'} />;
         }
 
         return (

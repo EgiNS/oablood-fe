@@ -13,7 +13,7 @@ class CardRequest extends Component {
       <div className="col">
         <div className="card card-container">
           <img src={rumahsakit2} alt="rumahsakit" className="card-img-top mb-4" />
-          <p className="lokasi-rs mb-4">TRumah Sakit RS William Booth Hospital Surabaya</p>
+          <p className="lokasi-rs mb-4">Rumah Sakit RS William Booth Hospital Surabaya</p>
           <p className="d-flex">
             <img src={bloodBag} alt="bloodbag" className="card-icon" />
             <span className="muted-text me-4">(8) dari (16) kantong terpenuhi</span>

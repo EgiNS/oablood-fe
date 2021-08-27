@@ -12,6 +12,7 @@ import Rhesus from './Assets/rhesus.svg';
 import Sex from './Assets/sex.svg';
 import User from './Assets/user.svg';
 import './Assets/style.css';
+import { Link } from 'react-router-dom';
 
 class EditProfile extends Component {
   state = {};
@@ -19,10 +20,12 @@ class EditProfile extends Component {
     return (
       <React.Fragment>
         <div className="w-100 py-5">
-          <a className="profil d-block" href="#">
-            {' '}
-            <img src={Back} alt="" /> Kembali ke Halaman Profil
-          </a>
+          <Link to="/profile">
+            <a className="profil d-block" href="#">
+              {' '}
+              <img src={Back} alt="" /> Kembali ke Halaman Profil
+            </a>
+          </Link>
         </div>
         <div className="container">
           <div className="row justify-content-center g-3 mb-4">

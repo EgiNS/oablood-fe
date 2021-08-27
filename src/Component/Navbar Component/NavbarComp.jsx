@@ -40,6 +40,7 @@ export default function NavbarComp() {
                                             <img src={user} alt="" />
                                         </div>
                                         <div className="user-namepoin">
+                                            {/* {console.log(this.props)} */}
                                             <p id="user-name">Joseph Widodo</p>
                                             <div className="user-poin">
                                                 <img src={poin} alt="" />
