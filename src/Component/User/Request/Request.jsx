@@ -6,11 +6,27 @@ import calendar from './Assets/calendar.svg';
 import notification from './Assets/notification.svg';
 import location from './Assets/location.svg';
 import './Assets/style.css';
-
-
+import axios from 'axios';
 
 class Request extends Component {
-  state = {};
+  state = {
+    post: []
+  }
+
+  componentDidMount() {
+    axios.get('/request').then(
+      res => {
+        console.log(res);
+        this.setState({
+          post: res.data
+        })
+      },
+      err => {
+        console.log(err);
+      }
+    )
+  };
+
   render() {
     return (
       <div className="request-container">
@@ -45,10 +61,13 @@ class Request extends Component {
             <input type="search" className=" form-search form-control" id="exampleFormControlInput1" placeholder="Temukan Rumah Sakit terdekat di sekitarmu ..."></input>
           </div>
           <div className="row row-cols-1 row-cols-md-2 g-4 m-3">
-            <CardRequest />
-            <CardRequest />
-            <CardRequest />
-            <CardRequest />
+            {
+              this.state.post.map(post => {
+                if (post.status === false) {
+                  return <CardRequest nama={post.id_rs} image={post.image} goldar={post.golongan_darah} rhesus={post.rhesus} publish={post.createdAt} butuh={post.kebutuhan} terpenuhi={post.terpenuhi} link={post.linkGmaps}/>
+                }
+              })
+            }
           </div>
         </div>
         <div className="iklan d-flex align-items-center m-3">

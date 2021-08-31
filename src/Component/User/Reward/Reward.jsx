@@ -7,9 +7,27 @@ import notification from './Assets/notification.svg';
 import poin from './Assets/poin.svg';
 import laptop from './Assets/laptop.jpg';
 import './Assets/style.css';
+import axios from 'axios';
+import card from './card';
 
 class Reward extends Component {
-  state = {};
+  state = {
+    post: []
+  }
+
+  componentDidMount() {
+    axios.get('/user/reward').then(
+      res => {
+        console.log(res);
+        this.setState({
+          post: res.data
+        })
+      },
+      err => {
+        console.log(err);
+      }
+    )
+  };
 
   render() {
     return (
@@ -44,10 +62,15 @@ class Reward extends Component {
             </select>
           </div>
           <div className="rewards row row-cols-1 row-cols-md-3 g-4 m-3">
+            {
+              this.state.post.map(post => {
+                return <CardReward image={post.image} name={post.name} point={post.point} point_user={this.props.user.point}/>
+              })
+            }
+            {/* <CardReward />
             <CardReward />
             <CardReward />
-            <CardReward />
-            <CardReward />
+            <CardReward /> */}
           </div>
         </div>
         <div className="iklan d-flex align-items-center m-3">

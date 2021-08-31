@@ -118,11 +118,11 @@ class Donor extends Component {
             </div>
             <div className="d-flex artikel">
               <div className="row row-cols-1 row-cols-md-2 g-4 m-3">
-                {/* {
+                {
                     this.state.post.map(post => {
-                        return <CardDonor name={post.}/>
+                        return <CardDonor nama={post.id_pmi} jadwal={post.jadwal} waktu={post.start} lokasi={post.lokasi} link={post.linkGmaps}/>
                     })
-                } */}
+                }
 
                 
                 {/* {
@@ -130,12 +130,6 @@ class Donor extends Component {
 
                   }
                 } */}
-                
-
-                <CardDonor />
-                <CardDonor />
-                <CardDonor />
-                <CardDonor />
               </div>
               <div className="iklan d-flex align-items-center m-3">
                 <div className="space-iklan d-flex align-items-center">

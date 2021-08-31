@@ -20,10 +20,7 @@ const LihatSyarat = (props) => {
           <div className="field-persyaratan">
             <h3 className="judul-persyaratan mb-3">Persyaratan Khusus Donor</h3>
             <p className="muted-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus officia nam non quidem dolorum. Repellendus magni unde est expedita, nemo laboriosam neque vitae minus praesentium necessitatibus voluptatem blanditiis ad
-              sint nobis quibusdam molestias! Repellat voluptas non ad doloremque sapiente eum natus dolorum tempora cum ratione beatae perspiciatis voluptate fugiat aliquid facilis, ducimus placeat explicabo. Nulla praesentium, iste
-              consectetur accusamus nisi recusandae illo laborum. Ipsum iusto accusamus ullam dolor et, inventore repudiandae nostrum officiis delectus fugiat rem, quia, nesciunt tenetur doloremque deleniti laudantium iste mollitia.
-              Voluptatem, maiores cumque totam voluptates vitae, doloribus sint eum architecto nulla praesentium veniam, non expedita officiis!
+              {props.syarat}
             </p>
           </div>
         </ModalBody>

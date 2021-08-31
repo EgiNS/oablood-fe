@@ -77,9 +77,10 @@ export default class App extends Component {
           <Route exact path="/donor" component={Donor} />
           <Route exact path="/request" component={Request} />
           <Route exact path="/reservasi" component={Reservasi} />
-          <Route exact path="/reward" component={Reward} />
+          <Route exact path="/reward" component={() => <Reward user={this.state.user} />} />
           <Route exact path="/profile" component={ () => <Profile user={this.state.user}/> } />
-          <Route exact path="/profile/edit" component={EditProfile} />
+          <Route exact path="/profile/edit" component={() => <EditProfile user={this.state.user}/>} />
+          <Route exact path="/upgrade" component={UpgradePro} />
         </Switch>
       </BrowserRouter>
     );

@@ -25,14 +25,14 @@ const ModalReservasi = (props) => {
           <h3 className="judul-modal">Apakah anda yakin ingin melakukan reservasi?</h3>
           <div className="calendar">
             <p className="pilih-tanggal">Pilih tanggal ✨</p>
-            <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} dateFormat="yyyy/MM/dd" minDate={new Date()} showMonthDropdown inline wrapperClassName="datepicker" />
+            <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} dateFormat="yyyy/MM/dd" minDate={new Date()} showMonthDropdown inline wrapperClassName="datepicker" />  
           </div>
         </ModalBody>
         <div className="d-flex foot-modal">
           <button type="button" className="btn button-batal" onClick={toggle}>
             Batal
           </button>
-          <button type="button" className="btn button-lanjutkan">
+          <button type="button" className="btn button-lanjutkan" onClick={()=>{ alert(`Behasil! Anda akan melakukan donor darah pada ${startDate}`); }}>
             Lanjutkan
           </button>
         </div>

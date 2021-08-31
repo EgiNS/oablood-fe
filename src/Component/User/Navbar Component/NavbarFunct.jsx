@@ -94,7 +94,7 @@ export default function NavbarComp(props) {
                   </div>
                 </li>
                 <div className="nav-ads">
-                  <Link to="#">
+                  <Link to="/upgrade">
                     {' '}
                     <img src={ads} alt="" />{' '}
                   </Link>

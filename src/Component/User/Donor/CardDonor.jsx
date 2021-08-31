@@ -10,18 +10,18 @@ export default function CardDonor(props) {
     <div className="col">
     <div className="card card-container">
       <img src={eventdonor} alt="eventdonor" className="card-img-top mb-4" />
-      <p className="lokasi-rs mb-4">SMAK Kolese Santo Yusup - Persos Hwa Ind</p>
+      <p className="lokasi-rs mb-4">{props.nama}</p>
       <p className="d-flex">
         <img src={publish} alt="publish" className="card-icon" />
-        <span className="muted-text me-3">(29 Agustus 2021)</span>
+        <span className="muted-text me-3">{props.jadwal}</span>
         <img src={clock} alt="clock" className="card-icon" />
-        <span className="muted-text">(09.00 - 14.00)</span>
+        <span className="muted-text">{props.waktu}</span>
       </p>
       <p className="d-flex">
         <img src={location} alt="location" className="card-icon" />
-        <span className="muted-text">(Aula SMAK Kolese Santo Yusup, Jl. Simpang Borobudur No.1, Kota Malang )</span>
+        <span className="muted-text">{props.lokasi}</span>
       </p>
-      <a href="https://www.google.com/maps/?hl=id" target="_blank" className="lihat-lokasi mb-3">
+      <a href={props.link} target="_blank" className="lihat-lokasi mb-3">
         Lihat Lokasi di Google Maps
       </a>
     </div>

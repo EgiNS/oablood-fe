@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './Assets/Logo.svg';
 import upgradebg from './Assets/upgradebg.svg';
 import './Assets/styleUpgradePro.css';
+import { Link } from 'react-router-dom';
 
 class UpgradePro extends Component {
   state = {};
@@ -9,7 +10,7 @@ class UpgradePro extends Component {
     return (
       <div className="upgrade-pro">
         <div className="logo">
-          <img src={logo} alt="" />
+          <Link to="/beranda"><img src={logo} alt="" /></Link>
         </div>
         <div className="upgrade-content d-flex">
           <div className="content">
@@ -20,9 +21,9 @@ class UpgradePro extends Component {
             <p className="penjelasan">Merasa keganggu saat mengakses website kami karena iklan disana sini? Say No to Iklan ketika anda sudah menjadi Pro Member</p>
             <h4 className="keuntungan">2x Poin Multiplier</h4>
             <p className="penjelasan">Pengen cepet redeem reward dari kami tapi ga mau nunggu lama? Pro Member solusinya, dapatkan 2x Poin Multiplier saat donor selesai</p>
-            <button type="button" className="btn button-upgrade">
+            <a href="https://api.whatsapp.com/send/?phone=62812312312" target="_blank"><button type="button" className="btn button-upgrade">
               Hubungi Admin Sekarang
-            </button>
+            </button></a>
           </div>
           <div className="image">
             <img src={upgradebg} alt="" />
