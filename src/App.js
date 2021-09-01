@@ -37,34 +37,48 @@ import axios from 'axios';
 import ArtikelComp from './Component/User/Beranda/ArtikelComp';
 
 const id_user = localStorage.getItem('id_user');
+const pengguna = localStorage.getItem('pengguna')
 
 export default class App extends Component {
   state = {};
 
   componentDidMount = () => {
-
-      axios.get(`user/profile/${id_user}`).then(
+      if (pengguna === "user") {
+        axios.get(`user/profile/${id_user}`).then(
           res => {
               this.setState({
                 user: res.data.profile
               })
-              // console.log(res);
-              // this.setUser(res.data.profile);
-              // console.log('state');
-              // console.log('halo', this.state.user.name);
               console.log(this.state.user);
           },
           err => {
               console.log(err);
-          }
-      )
+          })
+      } else if (pengguna === "rumah-sakit") {
+        axios.get(`rumah-sakit/profile-rs/${id_user}`).then(
+          res => {
+              this.setState({
+                user: res.data.profile
+              })
+              console.log(this.state.user);
+          },
+          err => {
+              console.log(err);
+          })
+      } else if (pengguna === "pmi") {
+        axios.get(`pmi/profile-pmi/${id_user}`).then(
+          res => {
+              this.setState({
+                user: res.data.profile
+              })
+              console.log(this.state.user);
+          },
+          err => {
+              console.log(err);
+          })
+      }
   };
 
-  // setUser = user => {
-  //   this.setState({
-  //     user: user
-  //   });
-  // };
   render() {
     return (
       <BrowserRouter>
@@ -81,6 +95,15 @@ export default class App extends Component {
           <Route exact path="/profile" component={ () => <Profile user={this.state.user}/> } />
           <Route exact path="/profile/edit" component={() => <EditProfile user={this.state.user}/>} />
           <Route exact path="/upgrade" component={UpgradePro} />
+          <Route exact path="/rs-beranda" component={() => <BerandaRS user={this.state.user}/>} />
+          <Route exact path="/rs-request" component={RequestRS} />
+          <Route exact path="/rs-jadwal" component={JadwalRS} />
+          <Route exact path="/rs-buatrequest" component={BuatRequest} />
+          <Route exact path="/pmi-beranda" component={() => <BerandaPMI user={this.state.user}/>} />
+          <Route exact path="/pmi-donor" component={DonorPMI} />
+          <Route exact path="/pmi-jadwal" component={JadwalPMI} />
+          <Route exact path="/pmi-buatevent" component={BuatEvent} />
+          <Route exact path="/admin/beranda" component={() => <BerandaAdmin user={this.state.user}/>} />
         </Switch>
       </BrowserRouter>
     );

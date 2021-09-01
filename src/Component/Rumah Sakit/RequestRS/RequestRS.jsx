@@ -5,6 +5,7 @@ import search from './Assets/search.svg';
 import location from './Assets/location.svg';
 import bloodwhite from './Assets/bloodwhite.svg';
 import './Assets/style.css';
+import { Link } from 'react-router-dom';
 
 class RequestRS extends Component {
   state = {};
@@ -30,10 +31,12 @@ class RequestRS extends Component {
               <img src={location} alt="location" />
               <input type="search" className=" form-search form-control" id="exampleFormControlInput1" placeholder="Temukan Rumah Sakit terdekat di sekitarmu ..."></input>
             </div>
-            <button type="button" className="btn" id="buat-request-button">
-              <img src={bloodwhite} alt="" />
-              Buat Request
-            </button>
+            <Link to="/rs-buatrequest">
+              <button type="button" className="btn" id="buat-request-button">
+                <img src={bloodwhite} alt="" />
+                Buat Request
+              </button>
+            </Link>
           </div>
           <div className="row row-cols-1 row-cols-md-2 g-4 m-3">
             <CardRequest />

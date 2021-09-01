@@ -38,7 +38,7 @@ export default function NavbarCompRS() {
                 <li className="nav-item">
                   <div className="nav-beranda nav-content">
                     <img src={beranda} alt="" />
-                    <Link to="/dashboard" className="nav-link" style={{ color: 'white' }}>
+                    <Link to="/rs-beranda" className="nav-link" style={{ color: 'white' }}>
                       {' '}
                       Beranda{' '}
                     </Link>
@@ -47,7 +47,7 @@ export default function NavbarCompRS() {
                 <li className="nav-item">
                   <div className="nav-content">
                     <img src={bloodgrey} alt="" />
-                    <Link to="/donor" className="nav-link" style={{ color: '#8A94A6;' }}>
+                    <Link to="/rs-request" className="nav-link" style={{ color: '#8A94A6;' }}>
                       {' '}
                       Request{' '}
                     </Link>
@@ -56,7 +56,7 @@ export default function NavbarCompRS() {
                 <li className="nav-item">
                   <div className="nav-content">
                     <img src={reservasi} alt="" />
-                    <Link to="/donor" className="nav-link" style={{ color: '#8A94A6;' }}>
+                    <Link to="/rs-jadwal" className="nav-link" style={{ color: '#8A94A6;' }}>
                       {' '}
                       Jadwal{' '}
                     </Link>
@@ -65,7 +65,7 @@ export default function NavbarCompRS() {
                 <li className="nav-item">
                   <div className="nav-content">
                     <img src={logout} alt="" />
-                    <Link to="/logout" className="nav-link" style={{ color: '#8A94A6;' }}>
+                    <Link to="/" className="nav-link" style={{ color: '#8A94A6;' }} onClick={() => localStorage.clear()}>
                       {' '}
                       Logout{' '}
                     </Link>

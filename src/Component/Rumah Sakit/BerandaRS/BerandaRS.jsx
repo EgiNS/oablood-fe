@@ -43,7 +43,7 @@ class BerandaRS extends Component {
           <div className="greet-content d-flex">
             <div className="greet me-5">
               <p className="muted-text-greet">
-                Halo, <span className="username">Pihak Rumah Sakit</span> &#128075;
+                Halo, <span className="username">{this.props.user.name}</span> &#128075;
               </p>
               <p className="muted-text">Rabu, 11 Agustus 2021</p>
             </div>

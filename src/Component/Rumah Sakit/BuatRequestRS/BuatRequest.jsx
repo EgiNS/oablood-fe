@@ -7,6 +7,7 @@ import rhesusred from './Assets/rhesusred.svg';
 import pencil from './Assets/pencil.svg';
 import back from './Assets/back.svg';
 import './Assets/style.css';
+import { Link } from 'react-router-dom';
 
 class BuatRequest extends Component {
   state = {};
@@ -14,10 +15,12 @@ class BuatRequest extends Component {
     return (
       <div className="buat-request">
         <div className="w-100 py-5">
-          <a className="profil d-block" href="#">
-            {' '}
-            <img src={back} alt="" /> Kembali ke Donor
-          </a>
+          <Link to="rs-request">
+            <a className="profil d-block" href="#">
+              {' '}
+              <img src={back} alt="" /> Kembali ke Donor
+            </a>
+          </Link>
         </div>
         <div className="request-form">
           <div className="left-side">
@@ -75,6 +78,9 @@ class BuatRequest extends Component {
             </div>
           </div>
         </div>
+        <center>
+          <button type="button" class="btn" id="buat-req">Buat Request</button>
+        </center>
       </div>
     );
   }

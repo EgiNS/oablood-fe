@@ -6,6 +6,7 @@ import calendar from './Assets/calendarred.svg';
 import gallery from './Assets/gallery.svg';
 import Pencil from './Assets/pencil.svg';
 import Back from './Assets/back.svg';
+import { Link } from 'react-router-dom';
 import './Assets/style.css';
 
 class BuatEvent extends Component {
@@ -14,10 +15,12 @@ class BuatEvent extends Component {
     return (
       <div className="buat-artikel">
         <div className="w-100 py-5">
-          <a className="profil d-block" href="#">
-            {' '}
-            <img src={Back} alt="" /> Kembali ke Donor
-          </a>
+          <Link to="pmi-donor">
+            <a className="profil d-block" href="">
+              {' '}
+              <img src={Back} alt="" /> Kembali ke Donor
+            </a>
+          </Link>
         </div>
         <div className="edit-bag-1">
           <div className="picture m-auto"></div>

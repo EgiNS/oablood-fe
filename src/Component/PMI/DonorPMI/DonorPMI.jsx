@@ -6,6 +6,7 @@ import calendar from './Assets/calendar.svg';
 import notification from './Assets/notification.svg';
 import location from './Assets/location.svg';
 import buatevent from './Assets/buatevent.svg';
+import { Link } from 'react-router-dom';
 import './Assets/style.css';
 
 class DonorPMI extends Component {
@@ -37,10 +38,12 @@ class DonorPMI extends Component {
           <div className="body-content">
             <div className="d-flex align-items-center header">
               <h2>Event Donor Darah di Sekitarmu &#127881;</h2>
+              <Link to="pmi-buatevent">
               <button type="button" className="btn buat-event-button" style={{ marginLeft: '2.3rem' }}>
                 <img src={buatevent} alt="" className="me-2" />
                 Buat Event
               </button>
+              </Link>
             </div>
             <div className="search-bar-rs d-flex p-1">
               <img src={location} alt="location" />

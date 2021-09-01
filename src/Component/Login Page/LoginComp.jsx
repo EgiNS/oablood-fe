@@ -26,6 +26,7 @@ export default class LoginComp extends Component {
                 console.log(res);
                 localStorage.setItem('token', res.data.token);
                 localStorage.setItem('id_user', res.data.id_user);
+                localStorage.setItem('pengguna', this.state.pengguna);
                 this.setState({
                     login: true
                 });
@@ -38,7 +39,15 @@ export default class LoginComp extends Component {
 
     render() {
         if (this.state.login) {
-            return <Redirect to={'/beranda'} />;
+            if (this.state.pengguna === "user") {
+                return <Redirect to={'/beranda'} />;
+            } else if (this.state.pengguna === "rumah-sakit") {
+                return <Redirect to={'/rs-beranda'} />;
+            } else if (this.state.pengguna === "pmi") {
+                return <Redirect to={'/pmi-beranda'} />;
+            } else if (this.state.pengguna === "admin") {
+                return <Redirect to={'/admin-beranda'} />;
+            }
         }
 
         return (
