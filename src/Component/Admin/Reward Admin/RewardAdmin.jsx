@@ -8,9 +8,26 @@ import rewardwhite from './Assets/rewardwhite.svg';
 import poin from './Assets/poin.svg';
 import laptop from './Assets/laptop.jpg';
 import './Assets/style.css';
+import axios from 'axios';
 
 class RewardAdmin extends Component {
-  state = {};
+  state = {
+    post: []
+  }
+
+  componentDidMount() {
+    axios.get('/user/reward').then(
+      res => {
+        console.log(res);
+        this.setState({
+          post: res.data
+        })
+      },
+      err => {
+        console.log(err);
+      }
+    )
+  };
 
   render() {
     return (

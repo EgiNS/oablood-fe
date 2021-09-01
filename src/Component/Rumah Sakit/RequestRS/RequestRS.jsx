@@ -6,9 +6,27 @@ import location from './Assets/location.svg';
 import bloodwhite from './Assets/bloodwhite.svg';
 import './Assets/style.css';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 class RequestRS extends Component {
-  state = {};
+  state = {
+    post: []
+  }
+
+  componentDidMount() {
+    axios.get('/request').then(
+      res => {
+        console.log(res);
+        this.setState({
+          post: res.data
+        })
+      },
+      err => {
+        console.log(err);
+      }
+    )
+  };
+
   render() {
     return (
       <div className="request-container">
