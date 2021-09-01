@@ -148,6 +148,12 @@ Input#email, Input#password, Input#nama, Form Button {
     color: #F98686;
 }
 
+.form-pilih {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 @media screen and (max-width: 768px) {
     html {
         font-size: 12px;

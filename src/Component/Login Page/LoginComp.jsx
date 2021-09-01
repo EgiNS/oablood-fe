@@ -8,7 +8,7 @@ import axios from 'axios';
 export default class LoginComp extends Component {
 
     state = {
-
+        pengguna: "user"
     }
 
     handleSubmit = e => {
@@ -19,7 +19,9 @@ export default class LoginComp extends Component {
             password: this.password
         }
 
-        axios.post('user/login', data)
+        console.log(this.state.pengguna);
+
+        axios.post(`${this.state.pengguna}/login`, data)
             .then(res => {
                 console.log(res);
                 localStorage.setItem('token', res.data.token);
@@ -35,7 +37,7 @@ export default class LoginComp extends Component {
     };
 
     render() {
-        if(this.state.login) {
+        if (this.state.login) {
             return <Redirect to={'/beranda'} />;
         }
 
@@ -49,8 +51,20 @@ export default class LoginComp extends Component {
                     <div className="bg"></div>
                 </div>
                 <div className="form-right" onSubmit={this.handleSubmit}>
-                    <p id="masuk"> Masuk </p>
-                    <p id="welcome"> Selamat datang di OABlood </p>
+                    <div className="form-pilih">
+                        <div className="form-masuk">
+                            <p id="masuk"> Masuk </p>
+                            <p id="welcome"> Selamat datang di OABlood </p>
+                        </div>
+                        <div className="form-select-pengguna">
+                            <select className="form-select opsi-pengguna" aria-label="Default select example" onChange={e => this.setState({ pengguna: e.target.value })}>
+                                <option value="user">Pendonor</option>
+                                <option value="pmi">PMI</option>
+                                <option value="rumah-sakit">Rumah Sakit</option>
+                                <option value="admin">Admin</option>
+                            </select>
+                        </div>
+                    </div>
                     <Form>
                         <Input type="email" name="email" id="email" placeholder="Email" onChange={e => this.email = e.target.value} />
                         <Input type="password" name="password" id="password" placeholder="Password" onChange={e => this.password = e.target.value} />
