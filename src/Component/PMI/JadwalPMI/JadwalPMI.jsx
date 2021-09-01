@@ -3,9 +3,27 @@ import NavbarCompPMI from '../NavbarCompPMI/NavbarCompPMI';
 import Pendonor from './Pendonor';
 import search from './Assets/search.svg';
 import './Assets/style.css';
+import axios from 'axios';
 
 class JadwalPMI extends Component {
-  state = {};
+  state = {
+    post: []
+  }
+
+  componentDidMount() {
+    axios.get('/pmi/pendonor').then(
+      res => {
+        console.log(res);
+        this.setState({
+          post: res.data
+        })
+      },
+      err => {
+        console.log(err);
+      }
+    )
+  };
+
   render() {
     return (
       <div className="donor-container">

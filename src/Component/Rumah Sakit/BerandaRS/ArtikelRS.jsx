@@ -3,9 +3,26 @@ import NavbarCompRS from '../NavbarCompRS/NavbarCompRS';
 import CardArtikelInstansi from '../../PMI/BerandaPMI/CardArtikelInstansi';
 import search from './Assets/search.svg';
 import './Assets/style.css';
+import axios from 'axios';
 
 class ArtikelRS extends Component {
-  state = {};
+  state = {
+    post: []
+  }
+
+  componentDidMount(){
+    axios.get('/user/artikel').then(
+      res => {
+        console.log(res);
+        this.setState({
+          post: res.data
+        })
+      },
+      err => {
+        console.log(err);
+      }
+    )
+  };
   render() {
     return (
       <div className="beranda-container">

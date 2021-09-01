@@ -6,9 +6,27 @@ import calendar from './Assets/calendar.svg';
 import notification from './Assets/notification.svg';
 import location from './Assets/location.svg';
 import './Assets/style.css';
+import axios from 'axios';
 
 class RequestAdmin extends Component {
-  state = {};
+  state = {
+    post: []
+  }
+
+  componentDidMount() {
+    axios.get('/request').then(
+      res => {
+        console.log(res);
+        this.setState({
+          post: res.data
+        })
+      },
+      err => {
+        console.log(err);
+      }
+    )
+  };
+
   render() {
     return (
       <div className="request-container">

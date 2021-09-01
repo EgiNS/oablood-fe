@@ -3,9 +3,27 @@ import NavbarCompRS from '../NavbarCompRS/NavbarCompRS';
 import Pendonor from '../../PMI/JadwalPMI/Pendonor';
 import search from './Assets/search.svg';
 import './Assets/style1.css';
+import axios from 'axios';
 
 class JadwalRS extends Component {
-  state = {};
+  state = {
+    post: []
+  }
+
+  componentDidMount() {
+    axios.get('/rumah-sakit/pendonor').then(
+      res => {
+        console.log(res);
+        this.setState({
+          post: res.data
+        })
+      },
+      err => {
+        console.log(err);
+      }
+    )
+  };
+
   render() {
     return (
       <div className="donor-container">
