@@ -36,6 +36,22 @@ class Beranda extends Component {
       )
   };
 
+  // riwayarDonor = () => {
+  //   if (this.props.user.riwayat_donor === null) {
+  //     return "Belum pernah donor"
+  //   } else {
+  //     return this.props.user.riwayat_donor
+  //   }
+  // }
+
+  // donorKembali = () => {
+  //   if(this.props.user.donor_kembali === null) {
+  //     return "Belum pernah donor"
+  //   } else {
+  //     return this.props.user.donor_kembali
+  //   }
+  // }
+
   render() {
     return (
       <div className="beranda-container">
@@ -79,9 +95,11 @@ class Beranda extends Component {
               <div className="text">
                 <h3>Apa itu OABlood?</h3>
                 <p className="muted-text">OABlood adalah salah satu startup di Indonesia yang bergerak di bidang kesehatan. Bekerjasama dengan PMI serta pihak rumah sakit membuat para pendonor mudah dalam melakukan aktivitas donor darah</p>
-                <button type="button" class="button-donor btn">
-                  Donor Sekarang
-                </button>
+                <Link to='/donor'>
+                  <button type="button" class="button-donor btn">
+                    Donor Sekarang
+                  </button>
+                </Link>
               </div>
               <div className="image">
                 <img src={introbg} alt="intro" />
@@ -93,11 +111,11 @@ class Beranda extends Component {
                 <div className="stats-donor">
                   <div className="box-stats">
                     <p className="muted-text text-center">Donor Terakhir</p>
-                    <p className="donor-terakhir text-center">test</p>
+                    <p className="donor-terakhir text-center">{this.props.user.riwayat_donor}</p>
                   </div>
                   <div className="box-stats">
                     <p className="muted-text text-center">Donor Kembali</p>
-                    <p className="donor-kembali text-center">test</p>
+                    <p className="donor-kembali text-center">{this.props.user.donor_kembali}</p>
                   </div>
                 </div>
                 <div className="image">
@@ -157,7 +175,7 @@ class Beranda extends Component {
                   <input type="email" className="form-control input-text-feedback" id="exampleFormControlInput1" placeholder="Email"></input>
                   <textarea className="form-control text-area-feedback" id="exampleFormControlTextarea1" rows="3" placeholder="Ketik Pesanmu Disini ..."></textarea>
                   <button type="button" className="button-feedback btn">
-                    Donor Sekarang
+                    Kirim Pesan
                   </button>
                 </div>
                 <div className="right-side">

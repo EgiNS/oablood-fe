@@ -6,23 +6,6 @@ import './Assets/style.css';
 import axios from 'axios';
 
 class JadwalPMI extends Component {
-  state = {
-    post: []
-  }
-
-  componentDidMount() {
-    axios.get('/pmi/pendonor').then(
-      res => {
-        console.log(res);
-        this.setState({
-          post: res.data
-        })
-      },
-      err => {
-        console.log(err);
-      }
-    )
-  };
 
   render() {
     return (

@@ -46,41 +46,6 @@ class EditProfile extends Component {
     )
   };
   
-  // state = {
-  //     alamat: "",
-  //     createdAt: this.props.user.createdAt,
-  //     donor_kembali: this.props.user.donor_kembali,
-  //     email: this.props.user.email,
-  //     golongan_darah: "",
-  //     id: this.props.user.id,
-  //     image: this.props.user.image,
-  //     jenis_kelamin: "",
-  //     name: this.props.user.name,
-  //     no_telp: "",
-  //     password: this.props.user.password,
-  //     point: this.props.user.point,
-  //     rhesus: "",
-  //     riwayat_donor: this.props.user.riwayat_donor,
-  //     role: this.props.user.role,
-  //     tanggal_lahir: "",
-  //     tempat_lahir: "",
-  //     totalDonor: "",
-  //     updatedAt: this.props.user.updatedAt
-  // };
-
-
-  // putData() {
-  //   axios.put(`/user/profile/${this.state.id}`, this.state).then(
-  //     (res) => {
-  //       console.log("resPut", res);
-  //     },
-  //     err => {
-  //         console.log("error bos", this.state)
-  //         console.log(err);
-  //     }
-  //   )
-  // }
-
   render() {
     return (
       <div className="edit-profile">

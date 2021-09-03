@@ -18,29 +18,6 @@ export default function NavbarComp(props) {
 
   const toggle = () => setIsOpen(!isOpen);
 
-//   let data = {
-
-//   };
-
-//   let getData = e => {
-//     e.preventDefault();
-  
-//     axios.get(`user/profile/${id_user}`).then(
-//       res => {
-//           // console.log("res", res);
-//           // this.setState({
-//           //     user: res.data.profile
-//           // }
-//           data.name = res.data.profile.name,
-//           data.point = res.data.profile.point
-//           // console.log(this.state.user);
-//       },
-//       err => {
-//           console.log(err);
-//       }
-//   )
-// };
-
   return (
     <div className="side-nav">
       <div className="nav-logo">
@@ -73,7 +50,7 @@ export default function NavbarComp(props) {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <div className="nav-beranda nav-content">
+                  <div className="nav-beranda nav-content" id="0">
                     <img src={beranda} alt="" />
                     <Link to="/beranda" className="nav-link" style={{ color: 'white' }}>
                       {' '}
@@ -81,7 +58,7 @@ export default function NavbarComp(props) {
                     </Link>
                   </div>
                 </li>
-                <li className="nav-item">
+                <li className="nav-item" style={{borderRadius:"15px"}}>
                   <div className="nav-content">
                     <img src={ayoDonor} alt="" />
                     <Link to="/donor" className="nav-link" style={{ color: '#8A94A6;' }}>
