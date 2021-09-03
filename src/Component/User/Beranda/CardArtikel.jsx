@@ -3,7 +3,7 @@ import './Assets/style.css';
 
 export default function CardArtikel(props) {
   return (
-    <div style={{ width: "15vw", display:"inline-block", marginLeft: "2vw" }}>
+    <div style={{ width: "20vw", display:"inline-block", marginLeft: "2vw" }}>
       <div class="col">
         <div class="card">
           <img src={`http://168.63.252.69:5000/uploads/${props.image}`} class="card-img-top" alt="cover" />

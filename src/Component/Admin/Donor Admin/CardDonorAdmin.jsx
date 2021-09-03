@@ -11,19 +11,19 @@ class CardDonorAdmin extends Component {
     return (
       <div className="col">
         <div className="card card-container">
-          <img src={eventdonor} alt="eventdonor" className="card-img-top mb-4" />
-          <p className="lokasi-rs mb-4">SMAK Kolese Santo Yusup - Persos Hwa Ind</p>
+          <img src={`http://168.63.252.69:5000/uploads/${this.props.image}`} alt="eventdonor" className="card-img-top mb-4" />
+          <p className="lokasi-rs mb-4">{this.props.nama}</p>
           <p className="d-flex">
             <img src={publish} alt="publish" className="card-icon" />
-            <span className="muted-text me-3">(29 Agustus 2021)</span>
+            <span className="muted-text me-3">{this.props.jadwal}</span>
             <img src={clock} alt="clock" className="card-icon" />
-            <span className="muted-text">(09.00 - 14.00)</span>
+            <span className="muted-text">{this.props.waktu} - {this.props.end}</span>
           </p>
           <p className="d-flex">
             <img src={location} alt="location" className="card-icon" />
-            <span className="muted-text">(Aula SMAK Kolese Santo Yusup, Jl. Simpang Borobudur No.1, Kota Malang )</span>
+            <span className="muted-text">{this.props.lokasi}</span>
           </p>
-          <a href="https://www.google.com/maps/?hl=id" target="_blank" className="lihat-lokasi mb-3">
+          <a href={this.props.link} target="_blank" className="lihat-lokasi mb-3">
             Lihat Lokasi di Google Maps
           </a>
         </div>
