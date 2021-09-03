@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import blood from './Assets/blood.svg';
+import bloodgrey from './Assets/bloodgrey.svg';
 import pengantri from './Assets/pengantri.svg';
-import rhesus from './Assets/rhesus.svg';
+import rhesusgrey from './Assets/rhesusgrey.svg';
 import rumahsakit1 from './Assets/rumahsakit1.png';
 import LihatSyarat from './LihatSyarat';
 import ModalReservasi from './ModalReservasi';
@@ -23,9 +23,9 @@ export default function CardReservasi(props) {
             </span>
           </p>
           <p className="d-flex">
-            <img src={blood} alt="golongan darah" className="card-icon" />
+            <img src={rhesusgrey} alt="golongan darah" className="card-icon" />
             <span className="muted-text me-3">{props.goldar}</span>
-            <img src={rhesus} alt="rhesus" className="card-icon" />
+            <img src={rhesusgrey} alt="rhesus" className="card-icon" />
             <span className="muted-text">{props.rhesus}</span>
           </p>
           <ModalReservasi className="modal-lg" id_rs={props.nama} id_req={props.id_req}/>

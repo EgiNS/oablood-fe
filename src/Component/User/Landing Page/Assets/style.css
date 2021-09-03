@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.landing-page {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
+  background-color: #fafbfc;
+  height: 120vh;
+}
+
+.content .right-side {
+  align-items: center;
+  width: 50vw;
+}
+
+.content .left-side {
+  width: 45vw;
+}
+
+.logo-oablood {
+  margin: 3% 0 0 4%;
+}
+
+.bgdoctor {
+  height: 100vh;
+}
+
+.bold-text {
+  font-weight: 600;
+  font-size: 2.5rem;
+  color: #4e5d78;
+  margin-bottom: 5%;
+}
+
+.text-mute {
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: #8a94a6;
+  margin-bottom: 5%;
+}
+
+.right-side .button-landing {
+  background: linear-gradient(20.13deg, #f65555 -7.81%, #fbb6b6 125.84%);
+  border-radius: 15px;
+  color: white;
+  width: 35%;
+  padding: 1.5% 0;
+}
+
+.right-side .button-landing:hover {
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .left-side {
+    display: none;
+  }
+
+  .content .right-side {
+    align-items: center;
+    width: 90%;
+  }
+
+  .right-side .button-landing {
+    background: linear-gradient(20.13deg, #f65555 -7.81%, #fbb6b6 125.84%);
+    border-radius: 15px;
+    color: white;
+    width: 50%;
+    padding: 1.5% 0;
+  }
+
+  .right-side .button-landing:hover {
+    color: white;
+  }
+}

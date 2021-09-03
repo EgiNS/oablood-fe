@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import rumahsakit2 from './Assets/rumahsakit2.png';
 import bloodBag from './Assets/bloodBag.svg';
 import publish from './Assets/publish.svg';
-import blood from './Assets/blood.svg';
-import rhesus from './Assets/rhesus.svg';
+import bloodgrey from './Assets/bloodgrey.svg';
+import rhesusgrey from './Assets/rhesusgrey.svg';
 import './Assets/style.css';
 
 export default function CardRequest(props) {
@@ -18,9 +18,9 @@ export default function CardRequest(props) {
             {/* <span className="muted-text">Lihat Syarat Donor</span> */}
           </p>
           <p className="d-flex">
-            <img src={blood} alt="golongan darah" className="card-icon" />
+            <img src={bloodgrey} alt="golongan darah" className="card-icon" />
             <span className="muted-text me-3">Golongan Darah {props.goldar}</span>
-            <img src={rhesus} alt="rhesus" className="card-icon" />
+            <img src={rhesusgrey} alt="rhesus" className="card-icon" />
             <span className="muted-text">Rhesus {props.rhesus}</span>
           </p>
           <p className="d-flex">

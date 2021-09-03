@@ -29,16 +29,6 @@ class BerandaRS extends Component {
               <img src={search} alt="search" />
               <input type="search" className=" form-search form-control" id="exampleFormControlInput1" placeholder="Cari berita terkini tentang donor darah ..."></input>
             </div>
-            <div className="calendar p-2 mx-2">
-              <button type="button" className="btn">
-                <img src={calendar} alt="calendar" />
-              </button>
-            </div>
-            <div className="notification p-2 mx-2">
-              <button type="button" className="btn">
-                <img src={notification} alt="notification" />
-              </button>
-            </div>
           </div>
           <div className="greet-content d-flex">
             <div className="greet me-5">

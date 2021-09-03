@@ -21,6 +21,11 @@ export default function CardDonor(props) {
         <img src={location} alt="location" className="card-icon" />
         <span className="muted-text">{props.lokasi}</span>
       </p>
+      <div className="d-grid w-100 mx-auto">
+          <button class="btn card-button" id="button-daftar" type="button">
+            Daftar Sekarang
+          </button>
+      </div>
       <a href={props.link} target="_blank" className="lihat-lokasi mb-3">
         Lihat Lokasi di Google Maps
       </a>
