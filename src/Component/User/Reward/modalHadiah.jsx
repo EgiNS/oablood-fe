@@ -4,6 +4,7 @@ import CardReward from './card';
 import laptop from './Assets/laptop.jpg';
 import poin from './Assets/poin.svg';
 import './Assets/style.css';
+import axios from 'axios';
 
 const ModalHadiah = (props) => {
   const { buttonLabel, className } = props;
@@ -12,13 +13,25 @@ const ModalHadiah = (props) => {
 
   const toggle = () => setModal(!modal);
 
-  const respon = (point_butuh, point_ada) => {
-    if (point_butuh > point_ada) {
-      return alert("Maaf, point anda tidak mencukupi!");
-    } else {
-      return alert("Selamat! Point telah berhasil ditukar!");
-    }
+  const data = {
+    id_reward : props.id
   }
+
+  const handleSubmit = e => {
+    e.preventDefault();
+
+    axios.post('user/tukarpoint', data).then(
+        res => {
+            // console.log(res);
+            alert(res.response.data.message);
+        }
+    ).catch(
+        err => {
+            // console.log(err.response.data.message);
+            alert(err.response.data.message);
+        }
+    )
+  };
 
   return (
     <div>
@@ -45,7 +58,7 @@ const ModalHadiah = (props) => {
           <button type="button" className="btn batal mx-2" onClick={toggle}>
             Batal
           </button>{' '}
-          <button type="button" className="btn lanjutkan mx-2" onClick={()=> respon(props.point, props.point_user)}>
+          <button type="button" className="btn lanjutkan mx-2" onClick={handleSubmit}>
             Lanjutkan
           </button>
         </ModalFooter>

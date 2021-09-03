@@ -28,7 +28,7 @@ export default function CardReservasi(props) {
             <img src={rhesus} alt="rhesus" className="card-icon" />
             <span className="muted-text">{props.rhesus}</span>
           </p>
-          <ModalReservasi className="modal-lg" />
+          <ModalReservasi className="modal-lg" id_rs={props.nama} id_req={props.id_req}/>
         </div>
       </div>
     </div>

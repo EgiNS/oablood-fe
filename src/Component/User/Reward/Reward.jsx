@@ -64,7 +64,7 @@ class Reward extends Component {
           <div className="rewards row row-cols-1 row-cols-md-3 g-4 m-3">
             {
               this.state.post.map(post => {
-                return <CardReward image={post.image} name={post.name} point={post.point} point_user={this.props.user.point}/>
+                return <CardReward  id={post.id} image={post.image} name={post.name} point={post.point} point_user={this.props.user.point}/>
               })
             }
             {/* <CardReward />

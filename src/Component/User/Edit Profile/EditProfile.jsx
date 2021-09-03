@@ -11,7 +11,6 @@ import Pencil from './Assets/pencil.svg';
 import Rhesus from './Assets/rhesus.svg';
 import Sex from './Assets/sex.svg';
 import User from './Assets/user.svg';
-import profile from './Assets/profile.svg'
 import './Assets/style.css';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
@@ -98,7 +97,7 @@ class EditProfile extends Component {
             <div className="col-lg-4 left-side">
               <div className="edit-bag-1 container">
                 <div className="picture container">
-                  <img src={profile} alt="" width="150px" style={{ margin: "18%" }} />
+                  <img src={User} alt="" width="150px" style={{ margin: "18%" }} />
                 </div>
                 <div class="mb-3">
                   <label for="formFile" class="form-label">Unggah Foto Profil</label>

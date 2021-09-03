@@ -17,6 +17,30 @@ export default function NavbarComp(props) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
+
+//   let data = {
+
+//   };
+
+//   let getData = e => {
+//     e.preventDefault();
+  
+//     axios.get(`user/profile/${id_user}`).then(
+//       res => {
+//           // console.log("res", res);
+//           // this.setState({
+//           //     user: res.data.profile
+//           // }
+//           data.name = res.data.profile.name,
+//           data.point = res.data.profile.point
+//           // console.log(this.state.user);
+//       },
+//       err => {
+//           console.log(err);
+//       }
+//   )
+// };
+
   return (
     <div className="side-nav">
       <div className="nav-logo">
@@ -33,15 +57,15 @@ export default function NavbarComp(props) {
                   <Link to="/profile" className="nav-link">
                     <div className="user-profile">
                       <div id="user-pic">
-                        <img src={user} alt="" />
+                        <img src={user} alt="" style={{width:"2vw"}}/>
                       </div>
                       <div className="user-namepoin">
-                        <p id="user-name">Joseph Widodo</p>
+                        <p id="user-name">{localStorage.getItem('name')}</p>
                         <div className="user-poin">
                           <img src={poin} alt="" />
                           <p id="user-count">
                             {' '}
-                            <span id="point"> 50 </span> Poin
+                            <span id="point"> {localStorage.getItem('point')} </span> Poin
                           </p>
                         </div>
                       </div>

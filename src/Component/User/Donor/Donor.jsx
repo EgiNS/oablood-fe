@@ -34,12 +34,24 @@ class Donor extends Component {
                         pmi_name: [...this.state.pmi_name, res.data.profile.name] 
                       })
                       console.log("masuk", this.state.pmi_name)
+                      // this.setState(prevState => ({
+                      //   post: {                   // object that we want to update
+                      //       ...prevState.post[i],    // keep all other key-value pairs
+                      //       name: res.data.profile.name      // update the value of specific key
+                      //   }
+                      // }))
+
                   },
                   err => {
                       console.log(err);
                   }
                 )
               }
+              // for (let i=0; i<this.state.post.length; i++) {
+              //   this.setState({
+              //     post: [...this.state.post, this.state.pmi_name[i]]
+              //   })
+              // }
               console.log("post", this.state.post)
               console.log("name", this.state.pmi_name)
           },

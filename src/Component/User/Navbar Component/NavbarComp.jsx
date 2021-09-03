@@ -41,7 +41,7 @@ export default class NavbarComp extends Component {
         return (
             <div>
                 {/* {console.log("NavbarComp", this.state.user)} */}
-                <NavbarFunct user={this.state.user} />
+                <NavbarFunct/>
             </div>
         )
     }

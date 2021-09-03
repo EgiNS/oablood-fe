@@ -15,19 +15,23 @@ import { throwStatement } from '@babel/types';
 
     const [startDate, setStartDate] = useState(new Date());
 
+    const data = {
+      id_rs : props.id_rs,
+      id_request : props.id_req
+    }
+
     const handleSubmit = e => {
       e.preventDefault();
-      const data = {
-        jadwal_donor : this.jadwal_donor
-      }
   
       axios.post('user/donor-darah-rs', data).then(
           res => {
-              console.log(res);
+              // console.log(res);
+              alert(res.response.data.message);
           }
       ).catch(
           err => {
-              console.log(err);
+              // console.log(err.response.data.message);
+              alert(err.response.data.message);
           }
       )
     };
@@ -45,15 +49,15 @@ import { throwStatement } from '@babel/types';
             <h3 className="judul-modal">Apakah anda yakin ingin melakukan reservasi?</h3>
             <div className="calendar">
               <p className="pilih-tanggal">Pilih tanggal ✨</p>
-              {/* <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} dateFormat="yyyy/MM/dd" minDate={new Date()} showMonthDropdown inline wrapperClassName="datepicker" /> */}
-              <input type="date" onChange={(e) => this.jadwal_donor = e.target.value}/>
+              <DatePicker selected={startDate} onChange={(date) => setStartDate(date), data.jadwal_donor = startDate} dateFormat="yyyy/MM/dd" minDate={new Date()} showMonthDropdown inline wrapperClassName="datepicker" />
+              {/* <input type="date" onChange={(e) => data.jadwal_donor = e.target.value}/> */}
             </div>
           </ModalBody>
           <div className="d-flex foot-modal">
             <button type="button" className="btn button-batal" onClick={toggle}>
               Batal
             </button>
-            <button type="button" className="btn button-lanjutkan" onClick={() => { alert(`Behasil! Anda akan melakukan donor darah pada ${this.jadwal_donor}`); }}>
+            <button type="button" className="btn button-lanjutkan" onClick={handleSubmit}>
               Lanjutkan
             </button>
           </div>

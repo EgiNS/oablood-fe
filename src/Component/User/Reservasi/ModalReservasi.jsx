@@ -1,6 +1,6 @@
 import React, { Component, useState } from 'react'
 import axios from 'axios';
-import ModalReservasi from './ModalReservasiFunct';
+import ModalReservasiFunct from './ModalReservasiFunct';
 
 export default class ModalReservasiState extends Component {
 
@@ -30,7 +30,7 @@ export default class ModalReservasiState extends Component {
         console.log(this.state)
         return (
             <div>
-                <ModalReservasi/>
+                <ModalReservasiFunct id_rs={this.props.id_rs} id_req={this.props.id_req}/>
             </div>
         )
     }

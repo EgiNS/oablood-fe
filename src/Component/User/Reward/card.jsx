@@ -13,7 +13,7 @@ export default function card(props) {
           <img src={`http://168.63.252.69:5000/uploads/${props.image}`} className="card-img-top" alt="" />
           <div className="card-body">
             <h5 className="card-title">{props.name}</h5>
-            <ModalHadiah point={props.point} name={props.name} image={props.image} point_user={props.point_user}/>
+            <ModalHadiah id={props.id} point={props.point} name={props.name} image={props.image} point_user={props.point_user}/>
           </div>
         </div>
       </div>

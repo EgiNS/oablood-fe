@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Back from './Assets/back.svg';
 import { Link } from 'react-router-dom';
-import profile from './Assets/profile.svg'
+import User from './Assets/user.svg';
 import './Assets/style1.css';
 
 export default class Profile extends Component {
@@ -19,7 +19,7 @@ export default class Profile extends Component {
             <div className="col-lg-4 left-side">
               <div className="profile-picture container p-2 mb-3">
                 <div className="picture container my-3">
-                  <img src={profile} alt="" width="150px" style={{ margin: "18%" }} />
+                  <img src={User} alt="" width="150px" style={{ margin: "18%" }} />
                 </div>
                 <div className="d-grid gap-2">
                   <Link to="/profile/edit"> <button className="btn p-1 edit-profile" type="button" style={{ textIndent: "40px" }}>

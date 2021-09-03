@@ -49,6 +49,8 @@ export default class App extends Component {
               this.setState({
                 user: res.data.profile
               })
+              localStorage.setItem('name', res.data.profile.name);
+              localStorage.setItem('point', res.data.profile.point);
               console.log(this.state.user);
           },
           err => {

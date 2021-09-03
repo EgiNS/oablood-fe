@@ -19,6 +19,8 @@ export default class LoginComp extends Component {
             password: this.password
         }
 
+        let error = false;
+
         console.log(this.state.pengguna);
 
         axios.post(`${this.state.pengguna}/login`, data)
@@ -30,10 +32,13 @@ export default class LoginComp extends Component {
                 this.setState({
                     login: true
                 });
-                this.props.setUser(res.data.user)
+                this.props.setUser(res.data.user);
             })
             .catch(err => {
                 console.log(err);
+                if (err.response.data.message != undefined) {
+                    alert(err.response.data.message);
+                }
             })
     };
 
