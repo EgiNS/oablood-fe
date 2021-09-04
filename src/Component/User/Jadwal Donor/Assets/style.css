@@ -42,8 +42,12 @@
   }
 }
 
+.bagian-atas {
+  margin-left: 3%;
+}
+
 .icon {
-  width: 65%;
+  width: 100%;
 }
 
 .header-content {
