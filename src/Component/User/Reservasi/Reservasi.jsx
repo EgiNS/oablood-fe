@@ -69,7 +69,7 @@ class Reservasi extends Component {
           <div className="row row-cols-1 row-cols-md-2 g-4 m-3">
             {
               this.state.post.map(post => {
-                return <CardReservasi nama={post.id_rs} id_req={post.id} image={post.image} goldar={post.golongan_darah} rhesus={post.rhesus} syarat={post.keterangan}/>
+                return <CardReservasi id_rs={post.id_rs} id_req={post.id} image={post.image} goldar={post.golongan_darah} rhesus={post.rhesus} syarat={post.keterangan}/>
               })
             }
             {/* <CardReservasi />

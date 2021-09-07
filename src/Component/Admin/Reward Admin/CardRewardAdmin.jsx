@@ -5,24 +5,21 @@ import HapusReward from './HapusReward';
 import './Assets/style.css';
 import Link from 'react-router-dom';
 
-class CardRewardAdmin extends Component {
-  state = {};
-  render() {
-    return (
+export default function CardRewardAdmin(props) {
+  return (
+    <div>
       <div className="reward col">
         <div className="card">
-          <img src={laptop} className="card-img-top" alt="" />
+          <img src={`http://168.63.252.69:5000/uploads/${props.image}`} className="card-img-top" alt="" />
           <div className="card-body">
-            <h5 className="card-title">Contoh Hadiah</h5>
+            <h5 className="card-title">{props.name}</h5>
             <p className="card-text text-left teks-poin ">
-              <img src={poin} alt="poin" /> 999 Poin
+              <img src={poin} alt="poin" /> {props.point}
             </p>
-            <HapusReward />
+            <HapusReward id={props.id}/>
           </div>
         </div>
       </div>
-    );
-  }
+    </div>
+  )
 }
-
-export default CardRewardAdmin;

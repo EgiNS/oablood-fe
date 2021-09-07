@@ -5,8 +5,28 @@ import "./Assets/style.css";
 import calendar from "./Assets/calendar.svg";
 import notification from "./Assets/notification.svg";
 import search from "./Assets/search.svg";
+import axios from "axios";
 
 class JadwalDonor extends Component {
+
+state = {
+    post: []
+}
+
+componentDidMount(){
+    axios.get(`rumah-sakit/pendonor/${localStorage.getItem("id_user")}`).then(
+        res => {
+            console.log(res);
+            this.setState({
+                post: res.data
+            })
+        },
+        err => {
+            console.log(err);
+        }
+    )
+};
+
   render() {
     return (
       <div className="donor-container w-100">

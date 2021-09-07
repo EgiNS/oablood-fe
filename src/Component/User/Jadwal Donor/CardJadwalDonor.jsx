@@ -30,11 +30,6 @@ class CardJadwalDonor extends Component {
               Timur
             </span>
           </p>
-          <div className="d-grid w-100 mx-auto">
-            <button class="btn card-button" id="button-daftar" type="button">
-              Daftar Sekarang
-            </button>
-          </div>
           <a href="#" target="_blank" className="lihat-lokasi mb-3">
             Lihat Lokasi di Google Maps
           </a>

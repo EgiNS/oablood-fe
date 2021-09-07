@@ -13,9 +13,28 @@ import instagram from './Assets/instagram.svg';
 import user1 from './Assets/user1.svg';
 import buatartikel from './Assets/buat-artikel.svg';
 import './Assets/style.css';
+import { Link } from 'react-router-dom';
+import axios from 'axios';
+import CardArtikelAdmin from './CardArtikelAdmin';
 
 class BerandaAdmin extends Component {
-  state = {};
+  state = {
+    post: []
+  }
+
+  componentDidMount() {
+    axios.get('/user/artikel').then(
+      res => {
+        console.log(res);
+        this.setState({
+          post: res.data
+        })
+      },
+      err => {
+        console.log(err);
+      }
+    )
+  };
   render() {
     return (
       <div className="beranda-admin-container">
@@ -64,73 +83,34 @@ class BerandaAdmin extends Component {
             <div className="riwayat-donor">
               <h3 className="text-center">Buat Akun Instansi</h3>
               <p className="muted-text justified">Daftarkan akun untuk PMI atau Rumah sakit agar mereka dapat mengelola kegiatannya secara tersruktur, sistematis, dan masif</p>
-              <button type="button" className="btn buat-akun-button">
-                <img src={user1} alt="user" />
-                Buat Akun
-              </button>
+              <Link to='/admin-buatakun'>
+                <button type="button" className="btn buat-akun-button">
+                  <img src={user1} alt="user" />
+                  Buat Akun
+                </button>
+              </Link>
             </div>
           </div>
           <div className="artikel-section">
             <div className="header d-flex justify-content-between">
               <div className="d-flex align-items-center">
                 <h3 className="me-4">Artikel Kesehatan</h3>
-                <button type="button" className="btn" id="buat-artikel-button">
-                  <img src={buatartikel} alt="" />
-                  Buat Artikel
-                </button>
+                <Link to='/admin-buatartikel' style={{ textDecoration: "none" }}>
+                  <button type="button" className="btn" id="buat-artikel-button">
+                    <img src={buatartikel} alt="" />
+                    Buat Artikel
+                  </button>
+                </Link>
               </div>
               <p className="text-button">Lihat Semua Artikel</p>
             </div>
             <div className="artikel-kesehatan">
               <div className="row row-cols-1 row-cols-lg-4 g-4">
-                <div className="col">
-                  <div className="card card-container">
-                    <img src={artikelcover} alt="artikelcover" className="card-img-top mb-4" />
-                    <p className="muted-text">5 min read</p>
-                    <p className="lokasi-rs mb-4">TRumah Sakit RS William Booth Hospital Surabaya</p>
-                    <ModalBerandaAdmin />
-                  </div>
-                </div>
-                <div className="col">
-                  <div className="card card-container">
-                    <img src={artikelcover} alt="artikelcover" className="card-img-top mb-4" />
-                    <p className="muted-text">5 min read</p>
-                    <p className="lokasi-rs mb-4">TRumah Sakit RS William Booth Hospital Surabaya</p>
-                    <ModalBerandaAdmin />
-                  </div>
-                </div>
-                <div className="col">
-                  <div className="card card-container">
-                    <img src={artikelcover} alt="artikelcover" className="card-img-top mb-4" />
-                    <p className="muted-text">5 min read</p>
-                    <p className="lokasi-rs mb-4">TRumah Sakit RS William Booth Hospital Surabaya</p>
-                    <ModalBerandaAdmin />
-                  </div>
-                </div>
-                <div className="col">
-                  <div className="card card-container">
-                    <img src={artikelcover} alt="artikelcover" className="card-img-top mb-4" />
-                    <p className="muted-text">5 min read</p>
-                    <p className="lokasi-rs mb-4">TRumah Sakit RS William Booth Hospital Surabaya</p>
-                    <ModalBerandaAdmin />
-                  </div>
-                </div>
-                <div className="col">
-                  <div className="card card-container">
-                    <img src={artikelcover} alt="artikelcover" className="card-img-top mb-4" />
-                    <p className="muted-text">5 min read</p>
-                    <p className="lokasi-rs mb-4">TRumah Sakit RS William Booth Hospital Surabaya</p>
-                    <ModalBerandaAdmin />
-                  </div>
-                </div>
-                <div className="col">
-                  <div className="card card-container">
-                    <img src={artikelcover} alt="artikelcover" className="card-img-top mb-4" />
-                    <p className="muted-text">5 min read</p>
-                    <p className="lokasi-rs mb-4">TRumah Sakit RS William Booth Hospital Surabaya</p>
-                    <ModalBerandaAdmin />
-                  </div>
-                </div>
+              {
+                this.state.post.map(post => {
+                  return <CardArtikelAdmin judul={post.judul} link={post.link} image={post.image} id={post.id}/>
+                })
+              }
               </div>
             </div>
             <div className="feedback d-flex">

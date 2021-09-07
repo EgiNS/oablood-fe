@@ -90,63 +90,33 @@ export default class App extends Component {
     return (
       <BrowserRouter>
         <Switch>
-          <Route
-            exact
-            path="/"
-            component={() => <LoginComp setUser={this.setUser} />}
-          />
-          <Route
-            exact
-            path="/dashboard"
-            component={() => <DashboardComp user={this.state.user} />}
-          />
-          <Route
-            exact
-            path="/beranda"
-            component={() => <Beranda user={this.state.user} sapa="Halo" />}
-          />
+          <Route exact path="/" component={() => <LoginComp setUser={this.setUser} />} />
+          <Route exact path="/beranda" component={() => <Beranda user={this.state.user} sapa="Halo" />} />
           <Route exact path="/signup" component={SignUpComp} />
           <Route exact path="/artikel" component={ArtikelComp} />
           <Route exact path="/donor" component={Donor} />
           <Route exact path="/request" component={Request} />
           <Route exact path="/reservasi" component={Reservasi} />
-          <Route
-            exact
-            path="/reward"
-            component={() => <Reward user={this.state.user} />}
-          />
-          <Route
-            exact
-            path="/profile"
-            component={() => <Profile user={this.state.user} />}
-          />
-          <Route
-            exact
-            path="/profile/edit"
-            component={() => <EditProfile user={this.state.user} />}
-          />
+          <Route exact path="/jadwaldonor" component={JadwalDonor} />
+          <Route exact path="/reward" component={() => <Reward user={this.state.user} />} />
+          <Route exact path="/profile" component={() => <Profile user={this.state.user} />} />
+          <Route exact path="/profile/edit" component={() => <EditProfile user={this.state.user} />} />
           <Route exact path="/upgrade" component={UpgradePro} />
-          <Route
-            exact
-            path="/rs-beranda"
-            component={() => <BerandaRS user={this.state.user} />}
-          />
+          <Route exact path="/rs-beranda" component={() => <BerandaRS user={this.state.user} />} />
           <Route exact path="/rs-request" component={RequestRS} />
           <Route exact path="/rs-jadwal" component={JadwalRS} />
           <Route exact path="/rs-buatrequest" component={BuatRequest} />
-          <Route
-            exact
-            path="/pmi-beranda"
-            component={() => <BerandaPMI user={this.state.user} />}
-          />
+          <Route exact path="/pmi-beranda" component={() => <BerandaPMI user={this.state.user} />} />
           <Route exact path="/pmi-donor" component={DonorPMI} />
           <Route exact path="/pmi-jadwal" component={JadwalPMI} />
           <Route exact path="/pmi-buatevent" component={BuatEvent} />
-          <Route
-            exact
-            path="/admin/beranda"
-            component={() => <BerandaAdmin user={this.state.user} />}
-          />
+          <Route exact path="/admin-beranda" component={() => <BerandaAdmin user={this.state.user} />} />
+          <Route exact path="/admin-buatakun" component={BuatAkun} />
+          <Route exact path="/admin-buatartikel" component={BuatArtikel} />
+          <Route exact path="/admin-donor" component={DonorAdmin} />
+          <Route exact path="/admin-request" component={RequestAdmin} />
+          <Route exact path="/admin-reward" component={RewardAdmin} />
+          <Route exact path="/admin-buatreward" component={BuatReward} />
         </Switch>
       </BrowserRouter>
     );

@@ -13,48 +13,14 @@ import axios from 'axios';
 class DonorPMI extends Component {
   state = {
     post: [],
-    pmi_name:[]
   }
 
-  componentDidMount(){
+  componentDidMount = () => {
       axios.get('/event').then(
           res => {
-              console.log("event", res);
               this.setState({
-                  post: res.data,
+                post: res.data,
               })
-              for (let i=0; i<this.state.post.length; i++) {
-                // this.setState({
-                //   id_pmi: this.state.post.id_pmi 
-                // })
-                // console.log(this.state.id_pmi)
-                // res.data.profile.name
-                axios.get(`pmi/profile-pmi/${this.state.post[i].id_pmi}`).then(
-                  res => {
-                      this.setState({
-                        pmi_name: [...this.state.pmi_name, res.data.profile.name] 
-                      })
-                      console.log("masuk", this.state.pmi_name)
-                      // this.setState(prevState => ({
-                      //   post: {                   // object that we want to update
-                      //       ...prevState.post[i],    // keep all other key-value pairs
-                      //       name: res.data.profile.name      // update the value of specific key
-                      //   }
-                      // }))
-
-                  },
-                  err => {
-                      console.log(err);
-                  }
-                )
-              }
-              // for (let i=0; i<this.state.post.length; i++) {
-              //   this.setState({
-              //     post: [...this.state.post, this.state.pmi_name[i]]
-              //   })
-              // }
-              console.log("post", this.state.post)
-              console.log("name", this.state.pmi_name)
           },
           err => {
               console.log(err);
@@ -94,7 +60,7 @@ class DonorPMI extends Component {
               <div className="row row-cols-1 row-cols-md-2 g-4 m-3">
                 {
                     this.state.post.map(post => {
-                        return <CardDonorAdmin nama={post.id_pmi} jadwal={post.jadwal} waktu={post.start} end={post.end} lokasi={post.lokasi} link={post.linkGmaps} image={post.image}/>
+                        return <CardDonorAdmin id_pmi={post.id_pmi} jadwal={post.jadwal} waktu={post.start} end={post.end} lokasi={post.lokasi} link={post.linkGmaps} image={post.image}/>
                     })
                 }
                 {/* <CardDonorAdmin />

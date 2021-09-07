@@ -12,42 +12,21 @@ import axios from 'axios';
 class DonorAdmin extends Component {
   state = {
     post: [],
-    pmi_name:[]
   }
 
-  componentDidMount(){
+  componentDidMount = () => {
       axios.get('/event').then(
           res => {
-              console.log("event", res);
               this.setState({
-                  post: res.data,
+                post: res.data,
               })
-              for (let i=0; i<this.state.post.length; i++) {
-                // this.setState({
-                //   id_pmi: this.state.post.id_pmi 
-                // })
-                // console.log(this.state.id_pmi)
-                // res.data.profile.name
-                axios.get(`pmi/profile-pmi/${this.state.post[i].id_pmi}`).then(
-                  res => {
-                      this.setState({
-                        pmi_name: [...this.state.pmi_name, res.data.profile.name] 
-                      })
-                      console.log("masuk", this.state.pmi_name)
-                  },
-                  err => {
-                      console.log(err);
-                  }
-                )
-              }
-              console.log("post", this.state.post)
-              console.log("name", this.state.pmi_name)
           },
           err => {
               console.log(err);
           }
       )
   };
+  
   render() {
     return (
       <div className="donor-container">
@@ -101,10 +80,11 @@ class DonorAdmin extends Component {
             </div>
             <div className="d-flex">
               <div className="row row-cols-1 row-cols-md-2 g-4 m-3">
-                <CardDonorAdmin />
-                <CardDonorAdmin />
-                <CardDonorAdmin />
-                <CardDonorAdmin />
+                {
+                    this.state.post.map(post => {
+                        return <CardDonorAdmin id_pmi={post.id_pmi} jadwal={post.jadwal} waktu={post.start} end={post.end} lokasi={post.lokasi} link={post.linkGmaps} image={post.image}/>
+                    })
+                }
               </div>
             </div>
           </div>

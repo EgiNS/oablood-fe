@@ -36,21 +36,28 @@ class Beranda extends Component {
       )
   };
 
-  // riwayarDonor = () => {
-  //   if (this.props.user.riwayat_donor === null) {
-  //     return "Belum pernah donor"
-  //   } else {
-  //     return this.props.user.riwayat_donor
-  //   }
-  // }
+  handleSubmit = e => {
+    e.preventDefault();
+    const data = {
+      name: this.name,
+      email: this.email,
+      pesan:  this.pesan,
+      id_user: this.props.user.id
+    }
+    
+    console.log(data);
 
-  // donorKembali = () => {
-  //   if(this.props.user.donor_kembali === null) {
-  //     return "Belum pernah donor"
-  //   } else {
-  //     return this.props.user.donor_kembali
-  //   }
-  // }
+    axios.post('user/komplain', data).then(
+      (res) => {
+        console.log("res", res);
+        alert("Pesan Berhasil dikirim!");
+      },
+      err => {
+        console.log("error", err)
+        alert("Pesan gagal dikirim!");
+      }
+    )
+  };
 
   render() {
     return (
@@ -67,9 +74,11 @@ class Beranda extends Component {
                 <input type="search" className=" form-search form-control" id="exampleFormControlInput1" placeholder="Cari berita terkini tentang donor darah ..."></input>
               </div>
               <div className="calendar p-2 mx-2">
-                <button type="button" className="btn">
-                  <img src={calendar} alt="calendar" />
-                </button>
+                <Link to="/jadwaldonor">
+                  <button type="button" className="btn">
+                    <img src={calendar} alt="calendar" />
+                  </button>
+                </Link>
               </div>
               <div className="notification p-2 mx-2">
                 <button type="button" className="btn">
@@ -131,12 +140,6 @@ class Beranda extends Component {
             </div>
             <div className="artikel-kesehatan">
               <div className="row row-cols-1 row-cols-lg-4 g-4" style={{display:"flex", flexDirection:"row", alignItems:"center", alignContent:"stretch"}}>
-                {/* <div className="col">
-                  <div className="card card-container">
-                    <img src={artikelcover} alt="artikelcover" className="card-img-top mb-4" />
-                    <p className="lokasi-rs mb-4">Rumah Sakit RS William Booth Hospital Surabaya</p>
-                  </div>
-                </div> */}
                   {
                     this.state.post.map(post => {
                         return <CardArtikel judul={post.judul} link={post.link} image={post.image}/>
@@ -171,10 +174,10 @@ class Beranda extends Component {
               <div className="form-feedback d-flex">
                 <div className="left-side">
                   <h3>Perlu Bantuan ?</h3>
-                  <input className="form-control input-text-feedback" type="text" placeholder="Nama Lengkap" aria-label="default input example"></input>
-                  <input type="email" className="form-control input-text-feedback" id="exampleFormControlInput1" placeholder="Email"></input>
-                  <textarea className="form-control text-area-feedback" id="exampleFormControlTextarea1" rows="3" placeholder="Ketik Pesanmu Disini ..."></textarea>
-                  <button type="button" className="button-feedback btn">
+                  <input className="form-control input-text-feedback" type="text" placeholder="Nama Lengkap" aria-label="default input example" onChange={e => this.name = e.target.value}></input>
+                  <input type="email" className="form-control input-text-feedback" id="exampleFormControlInput1" placeholder="Email" onChange={e => this.email = e.target.value}></input>
+                  <textarea className="form-control text-area-feedback" id="exampleFormControlTextarea1" rows="3" placeholder="Ketik Pesanmu Disini ..." onChange={e => this.pesan = e.target.value}></textarea>
+                  <button type="button" className="button-feedback btn" onClick={this.handleSubmit}>
                     Kirim Pesan
                   </button>
                 </div>

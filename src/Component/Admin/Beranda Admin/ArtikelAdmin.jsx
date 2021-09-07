@@ -8,7 +8,7 @@ import buatartikel from './Assets/buat-artikel.svg';
 import './Assets/style.css';
 
 class ArtikelAdmin extends Component {
-  state = {};
+
   render() {
     return (
       <div className="beranda-container">
@@ -39,11 +39,6 @@ class ArtikelAdmin extends Component {
           </button>
           <div className="card-artikel">
             <div class="row row-cols-1 row-cols-md-3 g-4">
-              <CardArtikelAdmin />
-              <CardArtikelAdmin />
-              <CardArtikelAdmin />
-              <CardArtikelAdmin />
-              <CardArtikelAdmin />
             </div>
           </div>
         </div>

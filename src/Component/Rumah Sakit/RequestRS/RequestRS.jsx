@@ -57,10 +57,13 @@ class RequestRS extends Component {
             </Link>
           </div>
           <div className="row row-cols-1 row-cols-md-2 g-4 m-3">
-            <CardRequest />
-            <CardRequest />
-            <CardRequest />
-            <CardRequest />
+            {
+              this.state.post.map(post => {
+                if (post.status === false) {
+                  return <CardRequest id_rs={post.id_rs} image={post.image} goldar={post.golongan_darah} rhesus={post.rhesus} publish={post.createdAt} butuh={post.kebutuhan} terpenuhi={post.terpenuhi} link={post.linkGmaps}/>
+                }
+              })
+            }
           </div>
         </div>
       </div>

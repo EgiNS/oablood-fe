@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import './Assets/style.css';
+import axios from 'axios';
 
 const ModalBerandaAdmin = (props) => {
   const { buttonLabel, className } = props;
@@ -8,6 +9,19 @@ const ModalBerandaAdmin = (props) => {
   const [modal, setModal] = useState(false);
 
   const toggle = () => setModal(!modal);
+
+  const deleteArtikel = () => {
+    axios.delete(`admin/delete-artikel/${props.id}`).then(
+      res => {
+        console.log(res);
+        alert("Artikel berhasil dihapus!");
+      },
+      err => {
+        console.log(err);
+        alert("Artikel gagal dihapus!")
+      }
+    )
+  }
 
   return (
     <div>
@@ -22,7 +36,7 @@ const ModalBerandaAdmin = (props) => {
           <button type="button" className="btn batal mx-2" onClick={toggle}>
             Batal
           </button>{' '}
-          <button type="button" className="btn lanjutkan mx-2">
+          <button type="button" className="btn lanjutkan mx-2" onClick={deleteArtikel}>
             Lanjutkan
           </button>
         </ModalFooter>

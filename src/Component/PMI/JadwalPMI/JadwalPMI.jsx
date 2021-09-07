@@ -7,6 +7,24 @@ import axios from 'axios';
 
 class JadwalPMI extends Component {
 
+  state = {
+    post: []
+  }
+
+  componentDidMount() {
+    axios.get('/pmi/pendonor').then(
+      res => {
+        console.log(res);
+        this.setState({
+          post: res.data
+        })
+      },
+      err => {
+        console.log(err);
+      }
+    )
+  }
+
   render() {
     return (
       <div className="donor-container">
@@ -34,10 +52,17 @@ class JadwalPMI extends Component {
                 <p className="default-text">Tanggal Kegiatan</p>
                 <p className="default-text">Status Kegiatan</p>
               </div>
+              {
+                this.state.post.map(post => {
+                  if (post.selesai != true) {
+                    return <Pendonor id_user={post.id_user} id_event={post.id_event}/>
+                  }
+                })
+              }
+              {/* <Pendonor />
               <Pendonor />
               <Pendonor />
-              <Pendonor />
-              <Pendonor />
+              <Pendonor /> */}
             </div>
           </div>
         </div>

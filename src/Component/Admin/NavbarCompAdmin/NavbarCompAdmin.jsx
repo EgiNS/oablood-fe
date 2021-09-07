@@ -43,7 +43,7 @@ export default function NavbarCompAdmin() {
                 <li className="nav-item">
                   <div className="nav-beranda nav-content">
                     <img src={beranda} alt="" />
-                    <Link to="/dashboard" className="nav-link" style={{ color: 'white' }}>
+                    <Link to="/admin-beranda" className="nav-link" style={{ color: 'white' }}>
                       {' '}
                       Beranda{' '}
                     </Link>
@@ -52,7 +52,7 @@ export default function NavbarCompAdmin() {
                 <li className="nav-item">
                   <div className="nav-content">
                     <img src={ayoDonor} alt="" />
-                    <Link to="/donor" className="nav-link" style={{ color: '#8A94A6;' }}>
+                    <Link  to="/admin-donor" className="nav-link" style={{ color: '#8A94A6;' }}>
                       {' '}
                       Donor{' '}
                     </Link>
@@ -61,7 +61,7 @@ export default function NavbarCompAdmin() {
                 <li className="nav-item">
                   <div className="nav-content">
                     <img src={reqDarah} alt="" />
-                    <Link to="/request" className="nav-link" style={{ color: '#8A94A6;' }}>
+                    <Link to="/admin-request" className="nav-link" style={{ color: '#8A94A6;' }}>
                       {' '}
                       Request{' '}
                     </Link>
@@ -70,7 +70,7 @@ export default function NavbarCompAdmin() {
                 <li className="nav-item">
                   <div className="nav-content">
                     <img src={reward} alt="" />
-                    <Link to="/reward" className="nav-link" style={{ color: '#8A94A6;' }}>
+                    <Link to="/admin-reward" className="nav-link" style={{ color: '#8A94A6;' }}>
                       {' '}
                       Reward{' '}
                     </Link>
@@ -79,7 +79,7 @@ export default function NavbarCompAdmin() {
                 <li className="nav-item">
                   <div className="nav-content">
                     <img src={logout} alt="" />
-                    <Link to="/logout" className="nav-link" style={{ color: '#8A94A6;' }}>
+                    <Link to="/" className="nav-link" style={{ color: '#8A94A6;' }}>
                       {' '}
                       Logout{' '}
                     </Link>

@@ -64,7 +64,7 @@ class Request extends Component {
             {
               this.state.post.map(post => {
                 if (post.status === false) {
-                  return <CardRequest nama={post.id_rs} image={post.image} goldar={post.golongan_darah} rhesus={post.rhesus} publish={post.createdAt} butuh={post.kebutuhan} terpenuhi={post.terpenuhi} link={post.linkGmaps}/>
+                  return <CardRequest id_rs={post.id_rs} image={post.image} goldar={post.golongan_darah} rhesus={post.rhesus} publish={post.createdAt} butuh={post.kebutuhan} terpenuhi={post.terpenuhi} link={post.linkGmaps}/>
                 }
               })
             }

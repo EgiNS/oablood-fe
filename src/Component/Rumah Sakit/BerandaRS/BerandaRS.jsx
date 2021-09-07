@@ -13,6 +13,7 @@ import instagram from './Assets/instagram.svg';
 import user1 from './Assets/user1.svg';
 import buatartikel from './Assets/buat-artikel.svg';
 import './Assets/style.css';
+import { Link } from 'react-router-dom';
 
 class BerandaRS extends Component {
   state = {};
@@ -43,9 +44,11 @@ class BerandaRS extends Component {
               <div className="text">
                 <h3>Apa itu OABlood?</h3>
                 <p className="muted-text">OABlood adalah salah satu startup di Indonesia yang bergerak di bidang kesehatan. Bekerjasama dengan PMI serta pihak rumah sakit membuat para pendonor mudah dalam melakukan aktivitas donor darah</p>
-                <button type="button" class="d-grid button-donor btn">
-                  Buat Event
-                </button>
+                <Link to='/rs-buatrequest' style={{textDecoration:"none"}}>
+                  <button type="button" class="d-grid button-donor btn">
+                    Buat Request
+                  </button>
+                </Link>
               </div>
               <div className="image">
                 <img src={introbg} alt="intro" />

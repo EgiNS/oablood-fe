@@ -7,6 +7,7 @@ import notification from './Assets/notification.svg';
 import rewardwhite from './Assets/rewardwhite.svg';
 import poin from './Assets/poin.svg';
 import laptop from './Assets/laptop.jpg';
+import { Link } from 'react-router-dom';
 import './Assets/style.css';
 import axios from 'axios';
 
@@ -61,18 +62,20 @@ class RewardAdmin extends Component {
               </select>
             </div>
             <div className="buat-reward">
-              <button type="button" className="btn buat-reward-button">
-                <img src={rewardwhite} alt="reward" />
-                Buat Reward
-              </button>
+              <Link to='/admin-buatreward' style={{textDecoration:"none"}}>
+                <button type="button" className="btn buat-reward-button">
+                  <img src={rewardwhite} alt="reward" />
+                  Buat Reward
+                </button>
+              </Link>
             </div>
           </div>
           <div className="rewards row row-cols-1 row-cols-md-3 g-4 m-3">
-            <CardRewardAdmin />
-            <CardRewardAdmin />
-            <CardRewardAdmin />
-            <CardRewardAdmin />
-            <CardRewardAdmin />
+          {
+              this.state.post.map(post => {
+                return <CardRewardAdmin id={post.id} image={post.image} name={post.name} point={post.point}/>
+              })
+            }
           </div>
         </div>
       </div>

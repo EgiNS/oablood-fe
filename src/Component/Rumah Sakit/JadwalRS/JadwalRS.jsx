@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import NavbarCompRS from '../NavbarCompRS/NavbarCompRS';
-import Pendonor from '../../PMI/JadwalPMI/Pendonor';
+import PendonorRS from './PendonorRS.jsx';
 import search from './Assets/search.svg';
 import './Assets/style1.css';
 import axios from 'axios';
@@ -51,10 +51,13 @@ class JadwalRS extends Component {
                 <p className="default-text">Tanggal Kegiatan</p>
                 <p className="default-text">Status Kegiatan</p>
               </div>
-              <Pendonor />
-              <Pendonor />
-              <Pendonor />
-              <Pendonor />
+              {
+                this.state.post.map(post => {
+                  if (post.selesai != true) {
+                    return <PendonorRS id_user={post.id_user} id_event={post.id_event} jadwal={post.jadwal_donor}/>
+                  }
+                })
+              }
             </div>
           </div>
         </div>
