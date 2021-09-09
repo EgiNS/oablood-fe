@@ -109,7 +109,7 @@ export default function NavbarComp(props) {
                 <div className="nav-ads">
                   <NavLink to="/upgrade">
                     {" "}
-                    <img src={ads} alt="" />{" "}
+                    <img src={ads} alt="" style={{width:"18vw"}}/>{" "}
                   </NavLink>
                 </div>
                 <li className="nav-item">

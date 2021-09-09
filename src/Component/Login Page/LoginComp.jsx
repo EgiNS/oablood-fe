@@ -24,8 +24,8 @@ export default class LoginComp extends Component {
 
         console.log(this.state.pengguna);
 
-        axios.post(`${this.state.pengguna}/login`, data)
-            .then(res => {
+        axios.post(`${this.state.pengguna}/login`, data).then(
+            (res) => {
                 console.log(res);
                 localStorage.setItem('token', res.data.token);
                 localStorage.setItem('id_user', res.data.id_user);
@@ -33,14 +33,12 @@ export default class LoginComp extends Component {
                 this.setState({
                     login: true
                 });
-                this.props.setUser(res.data.user);
-            })
-            .catch(err => {
+            },
+            err => {
                 console.log(err);
-                if (err.response.data.message !== undefined) {
-                    alert(err.response.data.message);
-                }
-            })
+                alert(err.response.data.message);
+            }
+        )
     };
 
     render() {
