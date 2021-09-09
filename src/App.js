@@ -90,9 +90,11 @@ export default class App extends Component {
     return (
       <BrowserRouter>
         <Switch>
-          <Route exact path="/" component={() => <LoginComp setUser={this.setUser} />} />
+          <Route exact path="/" component={LandingPage} />
+          <Route exact path="/login" component={() => <LoginComp setUser={this.setUser} />} />
           <Route exact path="/beranda" component={() => <Beranda user={this.state.user} sapa="Halo" />} />
           <Route exact path="/signup" component={SignUpComp} />
+          <Route exact path="/syarat-ketentuan" component={SyaratdanKetentuan} />
           <Route exact path="/artikel" component={ArtikelComp} />
           <Route exact path="/donor" component={Donor} />
           <Route exact path="/request" component={Request} />

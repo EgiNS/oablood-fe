@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './assets/style.css';
 import Logo from './assets/Logo.svg';
-import { Input, Button, Form } from 'reactstrap';
+import Doctor from './assets/Group 6.svg';
+import { Input, Button, Form, Label } from 'reactstrap';
 import { Link, Redirect } from 'react-router-dom';
 import axios from 'axios';
 
@@ -36,7 +37,7 @@ export default class LoginComp extends Component {
             })
             .catch(err => {
                 console.log(err);
-                if (err.response.data.message != undefined) {
+                if (err.response.data.message !== undefined) {
                     alert(err.response.data.message);
                 }
             })
@@ -58,11 +59,8 @@ export default class LoginComp extends Component {
         return (
             <div className="kontainer">
                 <div className="bg-left">
-                    <div className="logo">
-                        <div id="logo-img"><img src={Logo} alt="" /></div>
-                        <p>OABlood</p>
-                    </div>
-                    <div className="bg"></div>
+                    <div className="logo"><img src={Logo} alt="" /></div>
+                    <div className="bg"><img src={Doctor} alt=""/></div>
                 </div>
                 <div className="form-right" onSubmit={this.handleSubmit}>
                     <div className="form-pilih">
@@ -71,6 +69,7 @@ export default class LoginComp extends Component {
                             <p id="welcome"> Selamat datang di OABlood </p>
                         </div>
                         <div className="form-select-pengguna">
+                            <Label>Sebagai:</Label>
                             <select className="form-select opsi-pengguna" aria-label="Default select example" onChange={e => this.setState({ pengguna: e.target.value })}>
                                 <option value="user">Pendonor</option>
                                 <option value="pmi">PMI</option>

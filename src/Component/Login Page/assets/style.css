@@ -8,53 +8,40 @@
 }
 
 .kontainer {
-    width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: row;
+    background-color: #FAFBFC;
 }
 
 .bg-left {
-    width: 42vw;
+    width: 40vw;
     height: 100vh;
     box-sizing: border-box;
 }
 
 .logo {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 10vh;
-    background-color: #FAFBFC;;
-    width: 42vw;
+    position: relative;
+    left: 5%;
+    background-color: #FAFBFC;
+    margin: 0 !important;
 }
 
-.logo #logo-img img{
-    margin: 3.7vw;
+.logo img {
+    margin: 3% 0 0 3% !important;
 }
 
-.logo p {
-    margin: auto -1.5vw;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 1.25rem;
-    line-height: 1.4rem;
-    letter-spacing: 1.5px;
-}
-
-.bg {
-    height: 90vh;
-    width: 42vw;
-    background-image: url("Group 6.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+.bg img{
+    height: 100vh;
+    overflow: hidden;
 }
 
 .form-right {
     display: flex;
+    background-color: #FAFBFC;
     flex-direction: column;
     justify-content: center;
+    align-content: center;
     margin: auto;
 }
 

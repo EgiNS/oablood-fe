@@ -32,20 +32,36 @@ class EditProfile extends Component {
       tanggal_lahir: this.tanggal_lahir,
       tempat_lahir: this.tempat_lahir,
     }
+
+    const picture = {
+      image: this.image,
+    }
     
     console.log(data);
 
     axios.put(`/user/profile/${this.props.user.id}`, data).then(
       (res) => {
         console.log("resPut", res);
+        alert(res.data.message);
       },
       err => {
           console.log("error bos", err)
           console.log(err);
       }
     )
+
+    axios.put('user/picture', picture).then(
+      (res) => {
+        console.log("resPut", res);
+        alert(res.data.message);
+      },
+      err => {
+          console.log("error", err)
+          console.log(err);
+      }
+    )
   };
-  
+
   render() {
     return (
       <div className="edit-profile">
@@ -66,7 +82,7 @@ class EditProfile extends Component {
                 </div>
                 <div class="mb-3">
                   <label for="formFile" class="form-label">Unggah Foto Profil</label>
-                  <input class="form-control" type="file" id="formFile"/>
+                  <input class="form-control" type="file" id="formFile" onChange={e => this.image = e.target.value}/>
                 </div>
                 <div className="d-grid gap-2 mb-5">
                   <button className="btn p-1 ganti-foto" type="button">
