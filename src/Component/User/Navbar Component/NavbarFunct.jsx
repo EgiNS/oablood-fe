@@ -116,7 +116,7 @@ export default function NavbarComp(props) {
                   <div className="nav-content">
                     <img src={logout} alt="" />
                     <NavLink
-                      to="/"
+                      to="/login"
                       className="nav-link"
                       style={{ color: "#8A94A6;" }}
                       onClick={() => localStorage.clear()}
