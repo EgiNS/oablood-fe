@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./Assets/style.css";
 import Logo from "./Assets/Logo.svg";
 import bgdoctor from "./Assets/bgdoctor.svg";
+import { Link } from "react-router-dom";
 
 class LandingPage extends Component {
   state = {};
@@ -22,9 +23,11 @@ class LandingPage extends Component {
                 Bosen ngantri lama saat kegiatan donor darah? Tenang! dengan
                 OAblood kamu bisa booking jadwal dulu
               </p>
-              <button type="button" className="btn button-landing">
-                Coba Sekarang
-              </button>
+              <Link to='/login'>
+                <button type="button" className="btn button-landing">
+                  Coba Sekarang
+                </button>            
+              </Link>
             </div>
           </div>
         </div>

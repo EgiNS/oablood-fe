@@ -79,7 +79,7 @@ export default function NavbarCompAdmin() {
                 <li className="nav-item">
                   <div className="nav-content">
                     <img src={logout} alt="" />
-                    <Link to="/" className="nav-link" style={{ color: '#8A94A6;' }}>
+                    <Link to="/login" className="nav-link" style={{ color: '#8A94A6;' }}>
                       {' '}
                       Logout{' '}
                     </Link>

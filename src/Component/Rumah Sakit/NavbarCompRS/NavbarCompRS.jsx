@@ -65,7 +65,7 @@ export default function NavbarCompRS() {
                 <li className="nav-item">
                   <div className="nav-content">
                     <img src={logout} alt="" />
-                    <Link to="/" className="nav-link" style={{ color: '#8A94A6;' }} onClick={() => localStorage.clear()}>
+                    <Link to="/login" className="nav-link" style={{ color: '#8A94A6;' }} onClick={() => localStorage.clear()}>
                       {' '}
                       Logout{' '}
                     </Link>
