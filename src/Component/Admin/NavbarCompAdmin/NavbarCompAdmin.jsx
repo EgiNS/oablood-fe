@@ -1,18 +1,24 @@
-import React, { useState } from 'react';
-import logo from './Assets/Logo.svg';
-import logoOnly from './Assets/LogoOnly.svg';
-import ayoDonor from './Assets/Donor.svg';
-import poin from './Assets/Poin.svg';
-import beranda from './Assets/Beranda.svg';
-import reqDarah from './Assets/Request.svg';
-import reservasi from './Assets/Reservasi.svg';
-import reward from './Assets/Reward.svg';
-import user from './Assets/User.svg';
-import ads from './Assets/Ads.svg';
-import logout from './Assets/Logout.svg';
-import './Assets/style.css';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import { Collapse, NavbarToggler, Nav, Navbar } from 'reactstrap';
+import React, { useState } from "react";
+import logo from "./Assets/Logo.svg";
+import logoOnly from "./Assets/LogoOnly.svg";
+import ayoDonor from "./Assets/Donor.svg";
+import poin from "./Assets/Poin.svg";
+import beranda from "./Assets/Beranda.svg";
+import reqDarah from "./Assets/Request.svg";
+import reservasi from "./Assets/Reservasi.svg";
+import reward from "./Assets/Reward.svg";
+import user from "./Assets/User.svg";
+import ads from "./Assets/Ads.svg";
+import logout from "./Assets/Logout.svg";
+import home from "./Assets/home.svg";
+import "./Assets/style.css";
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  NavLink,
+} from "react-router-dom";
+import { Collapse, NavbarToggler, Nav, Navbar } from "reactstrap";
 
 export default function NavbarCompAdmin() {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,49 +47,49 @@ export default function NavbarCompAdmin() {
                   </div>
                 </li>
                 <li className="nav-item">
-                  <div className="nav-beranda nav-content">
-                    <img src={beranda} alt="" />
-                    <Link to="/admin-beranda" className="nav-link" style={{ color: 'white' }}>
-                      {' '}
-                      Beranda{' '}
-                    </Link>
-                  </div>
+                  <NavLink
+                    to="/admin-beranda"
+                    className="nav-link nav-content"
+                    activeClassName="nav-active"
+                  >
+                    <img src={home} alt="" /> Beranda{" "}
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <div className="nav-content">
-                    <img src={ayoDonor} alt="" />
-                    <Link  to="/admin-donor" className="nav-link" style={{ color: '#8A94A6;' }}>
-                      {' '}
-                      Donor{' '}
-                    </Link>
-                  </div>
+                  <NavLink
+                    to="/admin-donor"
+                    className="nav-link nav-content"
+                    activeClassName="nav-active"
+                  >
+                    <img src={ayoDonor} alt="" /> Donor{" "}
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <div className="nav-content">
-                    <img src={reqDarah} alt="" />
-                    <Link to="/admin-request" className="nav-link" style={{ color: '#8A94A6;' }}>
-                      {' '}
-                      Request{' '}
-                    </Link>
-                  </div>
+                  <NavLink
+                    to="/admin-request"
+                    className="nav-link nav-content"
+                    activeClassName="nav-active"
+                  >
+                    <img src={reqDarah} alt="" /> Request{" "}
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <div className="nav-content">
-                    <img src={reward} alt="" />
-                    <Link to="/admin-reward" className="nav-link" style={{ color: '#8A94A6;' }}>
-                      {' '}
-                      Reward{' '}
-                    </Link>
-                  </div>
+                  <NavLink
+                    to="/admin-reward"
+                    className="nav-link nav-content"
+                    activeClassName="nav-active"
+                  >
+                    <img src={reward} alt="" /> Reward{" "}
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <div className="nav-content">
-                    <img src={logout} alt="" />
-                    <Link to="/login" className="nav-link" style={{ color: '#8A94A6;' }}>
-                      {' '}
-                      Logout{' '}
-                    </Link>
-                  </div>
+                  <NavLink
+                    to="/login"
+                    className="nav-link nav-content"
+                    style={{ color: "#8A94A6;" }}
+                  >
+                    <img src={logout} alt="" /> Logout{" "}
+                  </NavLink>
                 </li>
               </ul>
             </Nav>
