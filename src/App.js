@@ -53,6 +53,8 @@ export default class App extends Component {
           });
           localStorage.setItem("name", res.data.profile.name);
           localStorage.setItem("point", res.data.profile.point);
+          localStorage.setItem("riwayat", res.data.profile.riwayat_donor);
+          localStorage.setItem("kembali", res.data.profile.donor_kembali);
           console.log(this.state.user);
         },
         (err) => {
@@ -65,6 +67,7 @@ export default class App extends Component {
           this.setState({
             user: res.data.profile,
           });
+          localStorage.setItem("name", res.data.profile.name);
           console.log(this.state.user);
         },
         (err) => {
@@ -77,6 +80,7 @@ export default class App extends Component {
           this.setState({
             user: res.data.profile,
           });
+          localStorage.setItem("name", res.data.profile.name);
           console.log(this.state.user);
         },
         (err) => {

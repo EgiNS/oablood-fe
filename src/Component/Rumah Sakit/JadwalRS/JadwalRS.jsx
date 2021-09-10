@@ -54,7 +54,7 @@ class JadwalRS extends Component {
               {
                 this.state.post.map(post => {
                   if (post.selesai != true) {
-                    return <PendonorRS id_user={post.id_user} id_event={post.id_event} jadwal={post.jadwal_donor}/>
+                    return <PendonorRS id={post.id} id_user={post.id_user} id_event={post.id_event} jadwal={post.jadwal_donor}/>
                   }
                 })
               }

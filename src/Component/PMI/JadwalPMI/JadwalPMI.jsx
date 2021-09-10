@@ -55,7 +55,7 @@ class JadwalPMI extends Component {
               {
                 this.state.post.map(post => {
                   if (post.selesai != true) {
-                    return <Pendonor id_user={post.id_user} id_event={post.id_event}/>
+                    return <Pendonor id={post.id} id_user={post.id_user} id_event={post.id_event}/>
                   }
                 })
               }

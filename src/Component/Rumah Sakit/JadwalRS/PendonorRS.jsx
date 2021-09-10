@@ -39,7 +39,7 @@ export default class Pendonor extends Component {
   }
 
   putPendonor = () => {
-    axios.put(`rumah-sakit/selesai-rs/${this.props.id_user}`).then(
+    axios.put(`rumah-sakit/selesai-rs/${this.props.id}`).then(
       res => {
         console.log(res);
         alert("User telah selesai melakukan donor");
@@ -51,7 +51,7 @@ export default class Pendonor extends Component {
   }
 
   deletePendonor = () => {
-    axios.delete(`rumah-sakit/batal/${this.props.id_user}`).then(
+    axios.delete(`rumah-sakit/batal/${this.props.id}`).then(
       res => {
         console.log(res);
         alert("Pendonor berhasil dibatalkan!");
@@ -83,7 +83,7 @@ export default class Pendonor extends Component {
             </div>
           </div>
           <div className="id-pendonor">
-            <p className="default-text">{this.state.id}</p>
+            <p className="default-text">{this.props.id}</p>
           </div>
           <div className="tanggal-kegiatan">
             <p className="default-text">{this.props.jadwal}</p>

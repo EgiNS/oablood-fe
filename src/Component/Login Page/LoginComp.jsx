@@ -20,9 +20,8 @@ export default class LoginComp extends Component {
             password: this.password
         }
 
-        let error = false;
-
         console.log(this.state.pengguna);
+        console.log(data);
 
         axios.post(`${this.state.pengguna}/login`, data).then(
             (res) => {
@@ -30,8 +29,6 @@ export default class LoginComp extends Component {
                 localStorage.setItem('token', res.data.token);
                 localStorage.setItem('id_user', res.data.id_user);
                 localStorage.setItem('pengguna', this.state.pengguna);
-                localStorage.setItem('riwayat', res.data.riwayat_donor);
-                localStorage.setItem('kembali', res.data.donor_kembali);
                 this.setState({
                     login: true,
                 });
@@ -46,10 +43,13 @@ export default class LoginComp extends Component {
     render() {
         if (this.state.login) {
             if (this.state.pengguna === "user") {
+                window.location.href = "http://localhost:3000/beranda"
                 return <Redirect to={'/beranda'} />;
             } else if (this.state.pengguna === "rumah-sakit") {
+                window.location.href = "http://localhost:3000/rs-beranda"
                 return <Redirect to={'/rs-beranda'} />;
             } else if (this.state.pengguna === "pmi") {
+                window.location.href = "http://localhost:3000/pmi-beranda"
                 return <Redirect to={'/pmi-beranda'} />;
             } else if (this.state.pengguna === "admin") {
                 return <Redirect to={'/admin-beranda'} />;
@@ -62,7 +62,7 @@ export default class LoginComp extends Component {
                     <div className="logo"><img src={Logo} alt="" /></div>
                     <div className="bg"><img src={Doctor} alt=""/></div>
                 </div>
-                <div className="form-right" onSubmit={this.handleSubmit}>
+                <div className="form-right">
                     <div className="form-pilih">
                         <div className="form-masuk">
                             <p id="masuk"> Masuk </p>
@@ -82,7 +82,7 @@ export default class LoginComp extends Component {
                         <Input type="email" name="email" id="email" placeholder="Email" onChange={e => this.email = e.target.value} />
                         <Input type="password" name="password" id="password" placeholder="Password" onChange={e => this.password = e.target.value} />
                         <Link to="/forgetpassword" id="forget"> Lupa Password </Link>
-                        <Button color="primary" size="lg" block>Masuk</Button>
+                        <Button color="primary" size="lg" block onClick={this.handleSubmit}>Masuk</Button>
                     </Form>
                     <p id="belum">Belum Punya Akun? <Link to="/signup"> Daftar </Link> </p>
                 </div>
