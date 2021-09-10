@@ -90,7 +90,7 @@ class Beranda extends Component {
           <div className="greet-content d-flex">
             <div className="greet me-5">
               <p className="muted-text-greet">
-                Halo, <span className="username">{this.props.user.name}</span> &#128075;
+                Halo, <span className="username">{localStorage.getItem('name')}</span> &#128075;
               </p>
               <p className="muted-text">Rabu, 11 Agustus 2021</p>
             </div>
@@ -119,11 +119,11 @@ class Beranda extends Component {
                 <div className="stats-donor">
                   <div className="box-stats">
                     <p className="muted-text text-center">Donor Terakhir</p>
-                    <p className="donor-terakhir text-center">{this.props.user.riwayat_donor}</p>
+                    <p className="donor-terakhir text-center">{localStorage.getItem('riwayat')}</p>
                   </div>
                   <div className="box-stats">
                     <p className="muted-text text-center">Donor Kembali</p>
-                    <p className="donor-kembali text-center">{this.props.user.donor_kembali}</p>
+                    <p className="donor-kembali text-center">{localStorage.getItem('kembali')}</p>
                   </div>
                 </div>
                 <div className="image">

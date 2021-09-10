@@ -30,8 +30,10 @@ export default class LoginComp extends Component {
                 localStorage.setItem('token', res.data.token);
                 localStorage.setItem('id_user', res.data.id_user);
                 localStorage.setItem('pengguna', this.state.pengguna);
+                localStorage.setItem('riwayat', res.data.riwayat_donor);
+                localStorage.setItem('kembali', res.data.donor_kembali);
                 this.setState({
-                    login: true
+                    login: true,
                 });
             },
             err => {

@@ -91,7 +91,7 @@ export default class App extends Component {
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={LandingPage} />
-          <Route exact path="/login" component={() => <LoginComp setUser={this.setUser} />} />
+          <Route exact path="/login" component={() => <LoginComp setUser={this.setUser}/>} />
           <Route exact path="/beranda" component={() => <Beranda user={this.state.user} />} />
           <Route exact path="/signup" component={SignUpComp} />
           <Route exact path="/syarat-ketentuan" component={SyaratdanKetentuan} />
