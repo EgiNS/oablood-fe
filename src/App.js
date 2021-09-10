@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import LoginComp from "./Component/Login Page/LoginComp";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import DashboardComp from "./Component/Dashboard Component/DashboardComp";
 import SignUpComp from "./Component/Login Page/SignUpComp";
 import Reservasi from "./Component/User/Reservasi/Reservasi";
 import NavbarComp from "./Component/User/Navbar Component/NavbarComp";

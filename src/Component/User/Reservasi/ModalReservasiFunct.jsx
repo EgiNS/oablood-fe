@@ -22,18 +22,16 @@ import { throwStatement } from '@babel/types';
 
     const handleSubmit = e => {
       e.preventDefault();
-  
+
       axios.post('user/donor-darah-rs', data).then(
-          res => {
-              // console.log(res);
-              alert(res.response.data.message);
-          }
-      ).catch(
-          err => {
-              // console.log(err.response.data.message);
-              alert(err.response.data.message);
-          }
+        (res) => {
+          alert(res.response.data.message);
+        },
+        err => {
+          alert(err.response.data.message);
+        }
       )
+
     };
     
     // setStartDate(date)
